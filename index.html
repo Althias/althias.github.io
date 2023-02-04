@@ -17,13 +17,13 @@
     <section id="navigation"></section>
     <script>
       const navigationContainer = document.querySelector("#navigation");
-      fetch("/assets/html/navigation.html")
+      fetch("./assets/html/navigation.html")
         .then(response => response.text())
         .then(headerHTML => {
           navigationContainer.innerHTML = headerHTML;
         });
     </script>
-    
+
     <!-- Section Banner -->
     <section id="banner"></section>
 
@@ -33,13 +33,13 @@
     <!-- Section Programmation -->
     <section class="section" id="programmation">
       <div class="container">
-        <h2 class="text-center">Programmation 0</h2>
+        <h2 class="text-center">Programmation 1</h2>
         <p class="text-center">Découvrez les artistes qui se produiront lors de notre festival</p>
         <div class="row">
           <div class="col-md-4">
             <div class="card mb-4" >
               <div style="
-                background-image: url(/assets/images/artites/CHAHU.png);
+                background-image: url(./assets/images/artites/CHAHU.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
