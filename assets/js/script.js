@@ -17,17 +17,15 @@ toggleBtns.forEach(btn => {
 });
 
 // include navigation
-const navigationContainer = document.querySelector("#navigation");
-fetch("/assets/html/navigation.html")
+fetch('./assets/html/navigation.html')
   .then(response => response.text())
-  .then(headerHTML => {
-    navigationContainer.innerHTML = headerHTML;
+  .then(data => {
+    document.querySelector('#navigation').innerHTML = data;
   });
 
 // include banner 
-const bannerContainer = document.querySelector("#banner");
-fetch("/assets/html/banner.html")
+fetch('./assets/html/banner.html')
   .then(response => response.text())
-  .then(headerHTML => {
-    bannerContainer.innerHTML = headerHTML;
+  .then(data => {
+    document.querySelector('#banner').innerHTML = data;
   });
