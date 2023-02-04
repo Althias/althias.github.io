@@ -9,33 +9,15 @@
     <!-- Feuilles de style CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./main/utils/style.css">
+    <script src="/assets/js/script.js"></script>
   </head>
 
   <body>    
     <!-- Navigation -->
-    <div id="navigation"></div>
-    <script>
-      const headerContainer = document.querySelector("#navigation");
-    
-      fetch("./assets/html/navigation.html")
-        .then(response => response.text())
-        .then(headerHTML => {
-          headerContainer.innerHTML = headerHTML;
-        });
-    </script>
+    <section id="navigation"></section>
 
     <!-- Section Banner -->
-    <section id="banner" style="padding-bottom: 20px;">
-      <div style="
-        background-image: url(./images/general/alambik_banner.JPG);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 350px;
-        background-color: black;">
-      </div>
-    </section>
+    <section id="banner"></section>
 
     <!-- Section Accueil -->
     <section class="section" id="acceuil">
@@ -50,7 +32,7 @@
           <div class="col-md-4">
             <div class="card mb-4" >
               <div style="
-                background-image: url(./images/artistes/CHAHU.png);
+                background-image: url(/assets/images/artites/CHAHU.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -68,7 +50,7 @@
 
               <div class="card mb-4">
                 <div style="
-                  background-image: url(./images/artistes/JOJ.jpg);
+                  background-image: url(/assets/images/artites/JOJ.jpg);
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
@@ -85,7 +67,7 @@
           <div class="col-md-4">
             <div class="card mb-4">
               <div style="
-                background-image: url(./images/artistes/CIAO.jpg);
+                background-image: url(/assets/images/artites/CIAO.jpg);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -183,10 +165,6 @@
         <p class="text-center">&copy; Alamik festival 2023</p>
       </div>
     </footer> 
-    <script src="./main/utils/script.js"></script>
-    <script>
-      navDisplay()
-    </script>  
   </body>
  
 </html>
