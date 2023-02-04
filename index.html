@@ -16,14 +16,13 @@
     <!-- Navigation -->
     <section id="navigation"></section>
     <script>
-      const navigationContainer = document.querySelector("#navigation");
-      fetch("./assets/html/navigation.html")
+      fetch('./assets/html/navigation.html')
         .then(response => response.text())
-        .then(headerHTML => {
-          navigationContainer.innerHTML = headerHTML;
+        .then(data => {
+          document.querySelector('#navigation').innerHTML = data;
         });
     </script>
-
+    
     <!-- Section Banner -->
     <section id="banner"></section>
 
