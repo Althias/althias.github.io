@@ -25,7 +25,6 @@
     
     <!-- Section Banner -->
     <section id="banner"></section>
-    <!-- 
     <script>
       fetch('./assets/html/banner.html')
         .then(response => response.text())
@@ -33,7 +32,6 @@
           document.querySelector('#banner').innerHTML = data;
         });
     </script>
-    -->
 
     <!-- Section Accueil -->
     <section class="section" id="acceuil"></section>
@@ -182,21 +180,21 @@
     </footer> 
     <script>
       // toggle-nav 
-const toggleBtns = document.querySelectorAll('.toggle-nav');
-toggleBtns.forEach(btn => {
-  btn.addEventListener('click', function () {
-    const targetId = this.dataset.toggle;
-    const sections = document.querySelectorAll('.section');
+      const toggleBtns = document.querySelectorAll('.toggle-nav');
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const targetId = this.dataset.toggle;
+          const sections = document.querySelectorAll('.section');
 
-    sections.forEach(section => {
-      if (section.id === targetId) {
-        section.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
-    });
-  });
-});
+          sections.forEach(section => {
+            if (section.id === targetId) {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
+          });
+        });
+      });
     </script>
   </body>
  
