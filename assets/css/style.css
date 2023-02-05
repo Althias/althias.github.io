@@ -11,9 +11,10 @@ nav {
     color: #000000;
 }
 
-footer {
+.footer {
     background-color: #41b999;
 }
+
 a:hover {
     color: inherit;
     cursor: pointer;
