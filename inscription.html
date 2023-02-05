@@ -37,19 +37,69 @@
         <h2 class="text-center">Inscriptions</h2>
         <form>
             <div class="form-group">
-            <label for="nom">Nom</label>
-            <input type="text" class="form-control" id="nom" placeholder="Votre nom">
+              <label for="nom">Nom & Prénom</label>
+              <input type="text" class="form-control" id="nom" required>
             </div>
             <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Votre email">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required>
             </div>
             <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+              <label for="billet">Billet</label>
+              <select type="text" class="form-control" id="billet"required>
+                <option value="25" selected>Billet 25€</option>
+                <option value="30">Billet 30€</option>
+                <option value="35">Billet 35€</option>
+              </select>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-        </form>
+            <div class="form-group">
+              <label for="carte-conso" title="10 poinçons par carte">Carte consommations</label>
+              <input type="number" class="form-control" min="0" max="10" id="carte-conso" value="0"></input>
+            </div>
+            <div class="form-group">
+              <label for="carte-conso" title="10 poinçons par carte">Repas : </label></br>
+              <label><input type="checkbox" name="meal[]" value="5" checked> Samedi soir</label></br>
+              <label><input type="checkbox" name="meal[]" value="5"> Dimanche midi</label></br>
+              <label><input type="checkbox" name="meal[]" value="5"> Dimanche soir</label></br>
+              <label><input type="checkbox" name="meal[]" value="5"> Lundi midi</label>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Total cost:</label>
+              <span id="total-cost"></span>
+              <script>
+                function calculateTotal() {
+                  // Get the value of the selected billet
+                  let billet = parseInt(document.querySelector("#billet").value);
+                  
+                  // Get the value of the carte-conso input field
+                  let carteConso = parseInt(document.querySelector("#carte-conso").value);
+                  
+                  // Get all the selected meal checkboxes
+                  let meals = document.querySelectorAll("input[name='meal[]']:checked");
+                  
+                  // Calculate the total cost of the meals
+                  let mealCost = 0;
+                  meals.forEach(meal => mealCost += parseInt(meal.value));
+                  
+                  // Calculate the total cost of the order
+                  let totalCost = billet + (carteConso * 10) + mealCost;
+                  
+                  // Display the total cost
+                  document.querySelector("#total-cost").innerHTML = "$" + totalCost;
+                }
+              
+                // Calculate the total cost when the form loads
+                window.onload = calculateTotal;
+                
+                // Recalculate the total cost when any form field changes
+                document.querySelector("form").addEventListener("change", calculateTotal);
+              </script>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
         </div>
     </section>
 
