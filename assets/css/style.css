@@ -6,9 +6,9 @@ body {
 }
 
 nav {
-    background-color: #202020;
+    background-color: #9B7E46;
     font-family: 'Courier New', Courier, monospace;
-    color: #ffffff;
+    color: #000000;
 }
 
 a:hover {
@@ -18,9 +18,9 @@ a:hover {
 }
 
 .alk-nav {
-    background-color: #202020;
+    background-color: #9B7E46;
     font-family: 'Times New Roman', Times, serif;
-    color: #ffffff;
+    color: #000000;
 }
 
 .separator-1 {
