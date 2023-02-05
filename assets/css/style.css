@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #9B7E46;
+    background-color: #41b999;
     font-family: 'Courier New', Courier, monospace;
     color: #000000;
 }
@@ -18,7 +18,7 @@ a:hover {
 }
 
 .alk-nav {
-    background-color: #9B7E46;
+    background-color: #41b999;
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
 }
@@ -65,7 +65,7 @@ a:hover {
 ****************/
 
 .card-container:hover .card-title{    
-    color: #9B7E46;
+    color: #41b999;
     text-decoration: none;
 }
 
