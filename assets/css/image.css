@@ -1,0 +1,45 @@
+.parallax {
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 300px; 
+    width: 80%;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+.card-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+.img-joj {
+    background-image: url('../images/artistes/JOJ.jpg');
+}
+
+.img-chahu {
+    background-image: url('../images/artistes/CHAHU.png');
+}
+
+.img-ciao {
+    background-image: url('../images/artistes/CIAO.jpg');
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up equal space */
+    grid-gap: 10px; /* space between the items */
+  }
+  
+  .grid-item {
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+  }

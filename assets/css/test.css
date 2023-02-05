@@ -59,7 +59,7 @@
     object-fit: cover;
 }
   
-
+/* ZOOM */
 
 .zoom-container {
     height: 400px;
@@ -79,6 +79,19 @@
 }
   
 
+
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns, each taking up equal space */
+    grid-gap: 10%; /* space between the items */
+  }
+  
+  .grid-item {
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+  }
 
   .main-nav {
     position: absolute;
