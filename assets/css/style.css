@@ -6,17 +6,13 @@ body {
 }
 
 nav {
-    background-color: #41b999;
+    background-color: #3a2811;
     font-family: 'Courier New', Courier, monospace;
-    color: #000000;
+    color: #ffffff;
 }
 
 .footer {
-    background-color: #41b999;
-}
-
-section {
-    border: 1px solid red;
+    background-color: #3a2811;
 }
 
 a:hover {
@@ -26,9 +22,9 @@ a:hover {
 }
 
 .alk-nav {
-    background-color: #41b999;
+    background-color: #3a2811;
     font-family: 'Times New Roman', Times, serif;
-    color: #000000;
+    color: #ffffff;
 }
 
 .separator-1 {

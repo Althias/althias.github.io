@@ -77,8 +77,10 @@
     text-align: center;
   }
 
+/* DIAMOND */
+
   .main-nav {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -100,7 +102,7 @@
     overflow: hidden;
     opacity: 0.6;
   }
-  
+
   .main-nav li:hover {
     opacity: 1;
   }
@@ -131,9 +133,11 @@
   }
   
   .main-nav li .bg {
-    width: 100%;
-    height: 100%;
-    transform: scale(1.1);
+    margin: -50px;
+    width: 150%;
+    height: 150%;
+    transform: rotate(-45deg);
+
   }
   
   .main-nav li.item1 .bg {
@@ -177,3 +181,76 @@
     font-family: "debussy";
     src: url("../font/debussy.ttf") format("truetype");
 }
+
+
+.diamond {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 20px;
+  }
+  
+  .diamond::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid gray;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  }
+
+  /**************
+      CIRCLE
+  ***************/
+
+  .container-galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /*************/
+
+  .gallery-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  .gallery2 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
