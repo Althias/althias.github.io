@@ -57,3 +57,49 @@ a:hover {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+
+
+/***************
+      CARD 
+****************/
+
+.card-container:hover .card-title{    
+    color: #9B7E46;
+    text-decoration: none;
+}
+
+.card-container:hover .card-img{
+    transform: scale(1.2);
+}
+
+.card-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;  
+}
+
+.card-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-title{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 0 20px 10px;
+    position: absolute;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2em;
+    color:#ffffff;   
+}
