@@ -69,11 +69,14 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p class="text-center">&copy; Festival de musique 2023</p>
-      </div>
-    </footer>
+    <!-- Section Footer -->
+    <section id="footer"></section>
+    <script>
+      fetch('./assets/html/footer.html')
+        .then(response => response.text())
+        .then(data => {
+      document.querySelector('#footer').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
