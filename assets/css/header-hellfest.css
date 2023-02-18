@@ -104,10 +104,6 @@ body {
   margin: auto;
 }
 
-section {
-  border: 1px solid red;
-}
-
 header {
   background-color: rgb(12, 12, 12);
   position: fixed;

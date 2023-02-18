@@ -107,7 +107,7 @@ section {
 }
 
 .wrap-loader {
-  animation: loading 0.25s ease-in-out;
+  animation: loading 2s ease-in-out;
   background-color: #212322;
   display: none;
   opacity: 0;
