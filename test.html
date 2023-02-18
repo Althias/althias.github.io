@@ -10,13 +10,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/test.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/test2.css">
     <script src="./assets/js/script.js"></script>
   </head>
 
   <body>    
     
     <header>
+      <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <ul>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Nos services</a></li>
+          <li><a href="#">Témoignages</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <a href="#" id="openBtn">&#9776;</a>
+      </a>
+      <script>
+        var sidenav = document.getElementById("mySidenav");
+        var openBtn = document.getElementById("openBtn");
+        var closeBtn = document.getElementById("closeBtn");
+
+        openBtn.onclick = openNav;
+        closeBtn.onclick = closeNav;
+
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          sidenav.classList.add("active");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          sidenav.classList.remove("active");
+        }
+      </script>
+      
+      <!--
       <nav class="navbar">
         <div class="navigation-3">
           <a href="#">Accueil</a>
@@ -40,6 +71,7 @@
           });
         </script>
       </nav>
+      -->
     </header>
 
     <!--

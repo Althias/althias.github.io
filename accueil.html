@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- En-tête de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alambik Festival</title>
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="./assets/js/script.js"></script>
+  </head>
+
+  <body>    
+    <!-- Navigation -->
+    <section id="navigation"></section>
+    <script>
+      fetch('./assets/html/navigation.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#navigation').innerHTML = data;
+        });
+    </script>
+    
+    <!-- Section Banner -->
+    <section id="banner"></section>
+    <script>
+      fetch('./assets/html/banner.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#banner').innerHTML = data;
+        });
+    </script>
+
+    <!-- Section Accueil -->
+    <section class="section" id="acceuil"></section>
+    
+    <!-- Section Footer -->
+    <section id="footer"></section>
+    <script>
+      fetch('./assets/html/footer.html')
+        .then(response => response.text())
+        .then(data => {
+      document.querySelector('#footer').innerHTML = data;
+        });
+    </script>
+  </body>
+ 
+</html>
