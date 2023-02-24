@@ -269,4 +269,12 @@ section {
     width: 100%;
     opacity: 1;
   }
+}
+/***************
+  BREAK POINT 
+****************/
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* 3 columns, each taking up equal space */
+  }
 }/*# sourceMappingURL=alambik.css.map */
