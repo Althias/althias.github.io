@@ -11,26 +11,18 @@
     padding-top: 40px;
 }
 
+.img-caub {
+    background-image: url('../images/artistes/CAUB.jpg');
+}
+
+.img-epicier {
+    background-image: url('../images/artistes/Epicier.jpg');
+}
+
+.img-mtl {
+    background-image: url('../images/artistes/MTL.jpg');
+}
+
 .img-joj {
-    background-image: url('../images/artistes/JOJ.jpg');
+    background-image: url('../images/artistes/joj.jpg');
 }
-
-.img-chahu {
-    background-image: url('../images/artistes/CHAHU.png');
-}
-
-.img-ciao {
-    background-image: url('../images/artistes/CIAO.jpg');
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up equal space */
-    grid-gap: 10px; /* space between the items */
-  }
-  
-  .grid-item {
-    background-color: lightblue;
-    border: 1px solid black;
-    text-align: center;
-  }

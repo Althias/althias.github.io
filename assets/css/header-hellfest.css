@@ -141,7 +141,7 @@ header .header-top nav .container .element-top:hover {
 
 .menu-full {
   height: 0%;
-  top: 80px;
+  top: 50px;
   position: fixed;
   width: 100%;
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -171,8 +171,4 @@ header .header-top nav .container .element-top:hover {
 }
 .menu-full nav ul li:hover {
   color: rgb(187, 209, 220);
-}
-.menu-full nav ul li .follow-mouse {
-  position: absolute;
-  cursor: pointer;
 }/*# sourceMappingURL=header-hellfest.css.map */

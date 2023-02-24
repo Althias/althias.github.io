@@ -8,53 +8,160 @@
   <title>Alambik Festival</title>
   <!-- Feuilles de style CSS -->
   <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 </head>
 
 <!-- HEADER -->
-    <header>
-    
-    </header>
+  <header>
+    <section class="header-top">
+      <nav>
+        <div>
+          Alambik Festival
+        </div>
+        <ul>
+          <li>Programmation</li>
+          <li>Billeterie</li>
+        </ul>
+        <div onclick="toggleMenu()">
+          &#9776;
+        </div>
+      </nav>
+    </section>
+    <section class="header-full"> 
+      <nav> 
+        <ul>
+          <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+          <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
+          <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+          <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
+          <li class="header-full-element" data-value="NEWS"><span>NEWS</span></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
 
 <!-- BODY -->
-    <body>    
+  <body style="top:80px">    
+    <section class="date">
+      <div>L'Alambik Festival</div>
+      <div>Déjà la 3ème édition de ce rassemblement incontournable de l'été</div>
+      <div>On vous attend nombreux du 12 au 14 Août</div>
+    </section>
+    
+    <section class="programmation">
+      <div>
+        <div>Programmation</div>
+        <div class="grid-container">
+          <div class="card card-container">
+            <div class="card-img img-caub"></div>
+            <div class="card-title">
+              Chahu
+            </div>
+          </div>
+          <div class="card card-container">
+            <div class="card-img img-epicier"></div>
+            <div class="card-title">
+              Epicier
+            </div>
+          </div>
+          <div class="card card-container">
+            <div class="card-img img-mtl"></div>
+            <div class="card-title">
+              Not From Mtl.
+            </div>
+          </div>
+          <div class="card card-container">
+            <div class="card-img img-joj"></div>
+            <div class="card-title">
+              Joanne o Joan
+            </div>
+          </div>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="billeterie">
+      <div>Billeterie</div>
+      <div>Réservez dès maintenant votre place !</div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <section class="date">
-            <div>L'Alambik Festival</div>
-            <div>Déjà la 3ème édition de ce rassemblement incontournable de l'été</div>
-            <div>On vous attend nombreux du 12 au 14 Août</div>
-        </section>
-        
-        <section class="programmation">
-            <div>Programmation</div>
-            <ul>
-                <li>Artiste 1</li>
-                <li>Artiste 2</li>
-                <li>Artiste 3</li>
-                <li>Artiste 4</li>
-            </ul>
-        </section>
-        
-        <section class="billeterie">
-            <div>Billeterie</div>
-            <div>Réservez dès maintenant votre place !</div>
-        </section>
+    <section class="infos">
+      <div>Fonctionnement du festival</div>
+      <div>Réservation de la place et des repas à l'inscription</div>
+      <div>Paiement sur place pour les boissons</div>
+    </section>
 
-        <section class="infos">
-            <div>Fonctionnement du festival</div>
-            <div>Réservation de la place et des repas à l'inscription</div>
-            <div>Paiement sur place pour les boissons</div>
-        </section>
-
-    </body>
+  </body>
 
 <!-- FOOTER-->
-    <footer>
+  <footer>
 
-    </footer>
+  </footer>
 
 <!-- ANIMATION -->
-    <div class="wrap-loader">
-        <span>Alambik Festival</span>
-    </div>
+  <div class="wrap-loader">
+    <div>Alambik Festival</div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const header = document.querySelector(".header-full");
+      header.classList.toggle("show");
+    
+      let listItems = header.querySelectorAll("li");
+
+      console.log(header);
+      console.log(listItems);
+
+      listItems.forEach(function (item, index) {
+        setTimeout(function () {
+          item.classList.toggle("show");
+        }, index * 100);
+      });
+    }
+  </script>
+
+  <script>
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const elements = document.querySelectorAll(".header-full-element");
+
+    let interval = null;
+    
+    function randomizeWord(event) {
+      let iteration = 0;
+      clearInterval(interval);
+      interval = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if(index < iteration) {
+              return event.target.dataset.value[index];
+            }
+          
+            return letters[Math.floor(Math.random() * 26)]
+          })
+          .join("");
+        
+        if(iteration >= event.target.dataset.value.length){ 
+          clearInterval(interval);
+        }
+        
+        iteration += 1 / 3;
+      }, 20);
+    }
+
+    elements.forEach((element) => {
+      element.addEventListener("mouseenter", (event) => {
+        randomizeWord(event);
+      });
+      element.addEventListener("mouseleave", (event) => {
+        event.target.innerText = event.target.dataset.value;
+      });
+    });
+
+  </script>
 
 </html>

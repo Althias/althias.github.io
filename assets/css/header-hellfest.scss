@@ -67,7 +67,7 @@ header {
 
 .menu-full {
   height: 0%;
-  top:80px;
+  top:50px;
   position: fixed;
   width: 100%;
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -101,11 +101,6 @@ header {
           color:$color-2
         }
 
-        .follow-mouse {        
-          position: absolute;
-          cursor: pointer;
-
-        }
       }
     }
   }
