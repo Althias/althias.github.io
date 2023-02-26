@@ -96,14 +96,38 @@ iframe {
   font-family: "aldery";
   src: url("../font/adlery-pro.regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Oxanium";
+  src: url("../font/Oxanium-VariableFont_wght.ttf") format("truetype");
+}
 body {
-  background-color: #65282e;
-  color: #cde7e7;
-  font-family: "Courier New", Courier, monospace;
+  background-color: #141614;
+  color: #e5f3f3;
+  font-family: "Oxanium", monospace;
   font-size: medium;
 }
 
+header .header-title {
+  font-family: "aldery";
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+header .header-top {
+  font-size: 1.5em;
+  z-index: 101;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  background-color: #141614;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 header .header-top nav {
+  padding: 10px;
+  width: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,60 +136,80 @@ header .header-top nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 20%;
 }
 header .header-full {
+  top: 80px;
   height: 0px;
   position: fixed;
   width: 100%;
-  background-color: #212322;
+  background-color: #141614;
   color: #57A773;
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
   font-size: 42px;
   font-weight: bolder;
-  z-index: 99;
+  z-index: 100;
   display: none;
 }
 header .header-full.show {
-  height: 100%;
+  height: calc(100% - 80px);
   opacity: 1;
   display: block;
 }
 header .header-full nav {
   height: 100%;
+  margin: 20px;
 }
 header .header-full nav ul {
-  margin: 20px;
   height: 100%;
   display: flex;
   align-items: left;
   justify-content: space-between;
   flex-direction: column;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 header .header-full nav ul li {
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 2em;
   width: -moz-min-content;
   width: min-content;
   transform: translateY(300%);
-  transition: transform 0s ease-in-out 0.5s;
+  transition: transform 0s ease-in-out 1s;
+  opacity: 0;
 }
 header .header-full nav ul li.show {
   transform: translateY(0%);
-  transition: transform 0.5s ease-in-out 0.25s;
+  transition: transform 0.75s ease-in-out 0.25s, opacity 0.25s ease-in-out 0.25s;
+  opacity: 1;
 }
 header .header-full nav ul li:hover {
-  color: #212322;
+  color: #141614;
   background-color: #57A773;
+}
+header .header-buger {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+main {
+  width: 1000px;
+  margin: auto;
 }
 
 section {
-  border: #552127 1px solid;
   margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-right: auto;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 /***************
@@ -210,7 +254,7 @@ section {
   font-family: monospace;
   font-weight: bold;
   font-size: 2em;
-  color: #cde7e7;
+  color: #e5f3f3;
 }
 
 .grid-container {
@@ -224,10 +268,21 @@ section {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #cde7e7;
+  background-color: #e5f3f3;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+
+/***************
+  NEON EFFECT 
+****************/
+.text-neon-blue {
+  text-shadow: 0 0 7px #e5f3f3, 0 0 10px #e5f3f3, 0 0 21px #e5f3f3, 0 0 42px rgb(229, 195, 209), 0 0 82px rgb(229, 195, 209), 0 0 92px rgb(229, 195, 209), 0 0 102px rgb(229, 195, 209), 0 0 151px rgb(229, 195, 209);
+}
+
+.box-neon-blue {
+  box-shadow: 0 0 7px #e5f3f3, 0 0 10px #e5f3f3, 0 0 21px #e5f3f3, 0 0 42px rgb(229, 195, 209), 0 0 82px rgb(229, 195, 209), 0 0 92px rgb(229, 195, 209), 0 0 102px rgb(229, 195, 209), 0 0 151px rgb(229, 195, 209);
 }
 
 /***************
@@ -236,20 +291,20 @@ section {
 .wrap-loader {
   font-family: "aldery";
   animation: loading 2s ease-in-out;
-  background-color: #212322;
+  background-color: #141614;
   display: none;
   opacity: 0;
   left: 0;
   top: 0;
-  color: white;
+  color: rgb(229, 195, 209);
   width: 0px;
   height: 0px;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: xx-large;
-  z-index: 10;
+  font-size: 8em;
+  z-index: 1000;
 }
 
 @keyframes loading {
@@ -274,7 +329,17 @@ section {
   BREAK POINT 
 ****************/
 @media only screen and (max-width: 800px) {
+  main {
+    width: 100%;
+  }
   .grid-container {
-    grid-template-columns: repeat(1, 1fr); /* 3 columns, each taking up equal space */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns, each taking up equal space */
+  }
+  .header-top ul {
+    display: none;
+    opacity: 0;
+  }
+  .header-top ul li {
+    display: none;
   }
 }/*# sourceMappingURL=alambik.css.map */

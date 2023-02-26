@@ -1,9 +1,14 @@
 @import "reset";
 
 @font-face {
-    font-family: 'aldery';
-    src: url('../font/adlery-pro.regular.ttf') format('truetype');
-  }
+  font-family: 'aldery';
+  src: url('../font/adlery-pro.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('../font/Oxanium-VariableFont_wght.ttf') format('truetype');
+}
 
 $color-1: #157145;
 $color-2: #57A773;
@@ -12,22 +17,45 @@ $color-3b: #552127;
 $color-4: #B7245C;
 $color-5: #edcbb1;
 
-$color-6: #212322;
-$color-7: #cde7e7;
+$color-10: #141614;
+$color-11: #161716;
+
+$color-20: #e5f3f3;
+$color-22: #43f4f1;
+$color-21: rgb(229, 195, 209);
 
 
 body{
-  background-color: $color-3;
-  color: $color-7;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: $color-10;
+  color: $color-20;
+  font-family: 'Oxanium', monospace;
   font-size:medium;
 }
 
 header {
-  
-  .header-top{
 
+  .header-title{
+    font-family: "aldery";
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .header-top{
+    font-size: 1.5em;
+    z-index: 101;
+    position:fixed;
+    width: 100%;
+    height: 80px;
+    top:0;
+    background-color: $color-10;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
     nav {
+      padding: 10px;
+      width: inherit;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -36,73 +64,92 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap:50px;
+        gap:20%;
 
       }
     }
   }
 
   .header-full {
+    top:80px;
     height: 0px;
     position: fixed;
     width: 100%;
-    background-color: $color-6;   
+    background-color: $color-10;   
     color: $color-2;   
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
     font-size: 42px;
     font-weight: bolder;
-    z-index: 99;
+    z-index: 100;
     display: none;
   
     &.show {
-      height: 100%;
+      height: calc(100% - 80px);
       opacity: 1;
       display: block;
     }
     
     nav {
-      height: 100%;      
+      height: 100%;   
+      margin: 20px;   
   
       ul {
-        margin: 20px;
         height: 100%;
         display: flex;
         align-items: left;
         justify-content: space-between;
         flex-direction: column;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
     
         li {
           border-radius: 5px;
           padding-left: 10px;
           padding-right: 10px;
+          font-size: 2em;
           width: min-content;
           transform: translateY(300%);
-          transition: transform 0s ease-in-out 0.5s;
+          transition: transform 0s ease-in-out 1s;
+          opacity: 0;
 
           &.show {
             transform: translateY(0%);  
-            transition: transform 0.5s ease-in-out 0.25s;
+            transition: transform 0.75s ease-in-out 0.25s, opacity 0.25s ease-in-out 0.25s;
+            opacity: 1;
           }
 
           &:hover {
-            color: $color-6;   
+            color: $color-10;   
             background-color: $color-2;  
           }
         }
       }
     }
   }
+
+  .header-buger {
+    user-select: none;
+    cursor: pointer;
+  }
 }
 
+main {
+  width: 1000px;
+  margin: auto;
+}
 
 section {
-  border: $color-3b 1px solid;
+//  border: $color-3b 1px solid;
   margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-right: auto;
 }
 
+
+h1 {
+  font-size: 1.5em;
+}
 
 /***************
       CARD 
@@ -146,7 +193,7 @@ section {
   font-family: monospace;
   font-weight: bold;
   font-size: 2em;
-  color: $color-7;   
+  color: $color-20;   
 }
 
 .grid-container {
@@ -160,12 +207,42 @@ section {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: $color-7;
+  background-color: $color-20;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
 
 }
+
+
+/***************
+  NEON EFFECT 
+****************/
+.text-neon-blue {
+  text-shadow:
+    0 0 7px $color-20,
+    0 0 10px $color-20,
+    0 0 21px $color-20,
+    0 0 42px $color-21,
+    0 0 82px $color-21,
+    0 0 92px $color-21,
+    0 0 102px $color-21,
+    0 0 151px $color-21;
+}
+
+.box-neon-blue {
+  box-shadow:
+    0 0 7px $color-20,
+    0 0 10px $color-20,
+    0 0 21px $color-20,
+    0 0 42px $color-21,
+    0 0 82px $color-21,
+    0 0 92px $color-21,
+    0 0 102px $color-21,
+    0 0 151px $color-21;
+}
+
+
 
 /***************
   WRAP LOADER 
@@ -174,20 +251,20 @@ section {
 .wrap-loader {
   font-family: "aldery";
   animation: loading 2s ease-in-out;
-  background-color: $color-6;
+  background-color: $color-10;
   display: none;
   opacity: 0;
   left: 0;
   top:0;
-  color:white;
+  color:$color-21;
   width: 0px;
   height: 0px;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: xx-large;
-  z-index: 10;
+  font-size: 8em;
+  z-index: 1000;
 }
 
 @keyframes loading {
@@ -213,7 +290,25 @@ section {
   BREAK POINT 
 ****************/
 @media only screen and (max-width:800px) {
-  .grid-container {
-    grid-template-columns: repeat(1, 1fr); /* 3 columns, each taking up equal space */
+  main {
+    width: 100%;
   }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns, each taking up equal space */
+  }
+
+  .header-top ul {
+    display:none;
+    opacity:0;
+
+    li {
+      display:none;
+    }
+  }
+}
+
+
+@media only screen and (max-width:1000px) {
+
 }
