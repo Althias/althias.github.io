@@ -1,0 +1,93 @@
+@import "reset";
+
+@font-face {
+  font-family: 'aldery';
+  src: url('../font/adlery-pro.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('../font/Oxanium-VariableFont_wght.ttf') format('truetype');
+}
+
+$color-1: #157145;
+$color-2: #57A773;
+$color-3: #65282e;
+$color-3b: #552127;
+$color-4: #B7245C;
+$color-5: #edcbb1;
+
+$color-10: #141614;
+$color-11: #161716;
+$color-12: #212321;
+$color-13: #444944;
+
+$color-20: #e5f3f3;
+$color-22: #43f4f1;
+$color-22: #a3ebe8;
+$color-21: rgb(97, 255, 85);
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-faq {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 3 columns, each taking up equal space */
+  gap: 10px;
+  padding: 50px;
+}
+
+.collapse-container {
+
+  width:100%;
+  height: min-content;
+  max-width: 1000px;
+  margin-bottom: 10px !important;
+  margin: auto;
+  background-color: $color-12;
+  border-radius: 10px;
+  padding: 20px;
+
+
+  .collapse-toggle {
+    width:100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrow {
+      position: relative;
+      left:0px;
+      border: solid rgb(226, 226, 226);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-135deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &.active {
+      .arrow { 
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  .collapse-panel {
+    overflow: hidden;
+    width:100%;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .collapse-content {
+    margin-top: 10px;
+  }
+}
