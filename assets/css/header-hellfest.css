@@ -141,7 +141,7 @@ header .header-top nav .container .element-top:hover {
 
 .menu-full {
   height: 0%;
-  top: 50px;
+  top: 80px;
   position: fixed;
   width: 100%;
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
