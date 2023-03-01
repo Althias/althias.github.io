@@ -24,7 +24,7 @@
           <li class="text-neon text-neon-pink">PROGRAMMATION</li>
           <li class="text-neon text-neon-pink">BILLETERIE</li>
         </ul>
-        <div class="header-buger text-neon-blue" onclick="toggleMenu()">
+        <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
           &#9776;
         </div>
       </nav>
@@ -418,12 +418,20 @@
   var card = document.querySelector('.card');
   card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
-    wait(50);
+    setTimeout(toggleNeon, 350);
+  });
+
+  function toggleNeon() {
     let elements = document.querySelectorAll('li.text-neon');
     elements.forEach((element) => {
       element.classList.toggle("text-neon-pink");
     });
-  });
+    
+    elements = document.querySelectorAll('div.header-buger');
+    elements.forEach((element) => {
+      element.classList.toggle("text-neon-blue");
+    });
+  }
 
  
 </script>

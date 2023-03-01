@@ -213,7 +213,7 @@ iframe {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB, 0 0 2em #F148FB;
-  box-shadow: 0 0 3px #27D1F6, 0 0 5px #27D1F6, 0 0 13px #27D1F6, inset 0 0 13px #27D1F6;
+  box-shadow: 0 0 3px #27D1F6, 0 0 13px #27D1F6, inset 0 0 13px #27D1F6;
   border: 1px solid #27D1F6;
   color: #F148FB;
 }

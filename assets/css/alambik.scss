@@ -90,7 +90,7 @@ header {
       
       ul {
         
-    font-size: 3em;
+        font-size: 3em;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -327,6 +327,7 @@ h2 {
 .text-neon {
   color: #3e3a3a;
   text-shadow: none;
+  font-family: "Neon pixel";
 }
 
 .text-neon-pink {
@@ -392,7 +393,6 @@ h2 {
       0 0 0.2em #F148FB,
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
-      0 0 1.2em #F148FB,
   }
   86% {  
     color: #F148FB;
@@ -400,7 +400,6 @@ h2 {
       0 0 0.2em #F148FB,
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
-      0 0 1.2em #F148FB,
   }
   
   87% {

@@ -345,6 +345,7 @@ h2 {
 .text-neon {
   color: #3e3a3a;
   text-shadow: none;
+  font-family: "Neon pixel";
 }
 
 .text-neon-pink {
@@ -401,11 +402,11 @@ h2 {
 @keyframes blinking-pink {
   0% {
     color: #F148FB;
-    text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB;
+    text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB;
   }
   86% {
     color: #F148FB;
-    text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB;
+    text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB;
   }
   87% {
     color: #3e3a3a;
