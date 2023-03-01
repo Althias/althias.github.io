@@ -100,6 +100,21 @@ iframe {
   font-family: "Oxanium";
   src: url("../font/Oxanium-VariableFont_wght.ttf") format("truetype");
 }
+@font-face {
+  font-family: "clip";
+  src: url("../font/Clip.ttf") format("truetype");
+}
+.header-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header-faq h1 {
+  font-size: 2em;
+  padding: 10px;
+}
+
 .faq {
   display: flex;
   flex-direction: column;
@@ -155,4 +170,59 @@ iframe {
 }
 .collapse-container .collapse-content {
   margin-top: 10px;
+}
+
+.search-container {
+  background-color: #212321;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/**********/
+.scene {
+  width: 120px;
+  height: 70px;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 270%;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Clip";
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB, 0 0 2em #F148FB;
+  box-shadow: 0 0 3px #27D1F6, 0 0 5px #27D1F6, 0 0 13px #27D1F6, inset 0 0 13px #27D1F6;
+  border: 1px solid #27D1F6;
+  color: #F148FB;
+}
+
+.card__face--front {
+  background-color: #141614;
+}
+
+.card__face--back {
+  background-color: #141614;
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=faq.css.map */

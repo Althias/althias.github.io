@@ -324,18 +324,18 @@ h2 {
     0 0 151px $color-21;
 }
 
-.text-neon-pink {
-  animation: blinking 4s infinite none;
-  
-  color: #F148FB;
-  text-shadow:
-    0 0 0.2em #F148FB,
-    0 0 0.5em #F148FB,
-    0 0 0.8em #F148FB,
-    0 0 1.2em #F148FB,
-    0 0 2.0em #F148FB;
+.text-neon {
+  color: #3e3a3a;
+  text-shadow: none;
 }
 
+.text-neon-pink {
+  animation: blinking-pink 4s infinite none;
+}
+
+.text-neon-blue {
+  animation: blinking-blue 3s infinite none;
+}
 
 
 /***************
@@ -384,7 +384,7 @@ h2 {
   }
 }
 
-@keyframes blinking {
+@keyframes blinking-pink {
 
   0% {  
     color: #F148FB;
@@ -393,7 +393,6 @@ h2 {
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
       0 0 1.2em #F148FB,
-      0 0 2.0em #F148FB;
   }
   86% {  
     color: #F148FB;
@@ -402,7 +401,6 @@ h2 {
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
       0 0 1.2em #F148FB,
-      0 0 2.0em #F148FB;
   }
   
   87% {
@@ -416,7 +414,6 @@ h2 {
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
       0 0 1.2em #F148FB,
-      0 0 2.0em #F148FB;
   }
 
   97% {  
@@ -426,7 +423,56 @@ h2 {
       0 0 0.5em #F148FB,
       0 0 0.8em #F148FB,
       0 0 1.2em #F148FB,
-      0 0 2.0em #F148FB;
+  }
+  98% {
+    color: #3e3a3a;
+    text-shadow: none;
+  }
+}
+
+@keyframes blinking-blue {
+
+  0% {  
+    color: #27D1F6;
+    text-shadow:
+      0 0 0.2em #27D1F6,
+      0 0 0.5em #27D1F6,
+      0 0 0.8em #27D1F6,
+      0 0 1.2em #27D1F6,
+      0 0 2.0em #27D1F6;
+  }
+  86% {  
+    color: #27D1F6;
+    text-shadow:
+      0 0 0.2em #27D1F6,
+      0 0 0.5em #27D1F6,
+      0 0 0.8em #27D1F6,
+      0 0 1.2em #27D1F6,
+      0 0 2.0em #27D1F6;
+  }
+  
+  87% {
+    color: #3e3a3a;
+    text-shadow: none;
+  }
+  89% {  
+    color: #27D1F6;
+    text-shadow:
+      0 0 0.2em #27D1F6,
+      0 0 0.5em #27D1F6,
+      0 0 0.8em #27D1F6,
+      0 0 1.2em #27D1F6,
+      0 0 2.0em #27D1F6;
+  }
+
+  97% {  
+    color: #27D1F6;
+    text-shadow:
+      0 0 0.2em #27D1F6,
+      0 0 0.5em #27D1F6,
+      0 0 0.8em #27D1F6,
+      0 0 1.2em #27D1F6,
+      0 0 2.0em #27D1F6;
   }
   98% {
     color: #3e3a3a;
