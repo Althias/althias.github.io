@@ -60,6 +60,7 @@ $color-21: rgb(97, 255, 85);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 
     .arrow {
       position: relative;
@@ -75,7 +76,6 @@ $color-21: rgb(97, 255, 85);
     &.active {
       .arrow { 
         transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
       }
     }
   }

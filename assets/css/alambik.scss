@@ -10,6 +10,21 @@
   src: url('../font/Oxanium-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Denever';
+  src: url('../font/hellodenverdisplayregular_v1.6.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Denever bold';
+  src: url('../font/hellodenverdisplaybold_v1.6.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neon pixel';
+  src: url('../font/neon_pixel-7.ttf') format('truetype');
+}
+
 $color-1: #157145;
 $color-2: #57A773;
 $color-3: #65282e;
@@ -35,34 +50,47 @@ body{
 }
 
 header {
-
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
+  
   .header-title{
     font-family: "aldery";
-    font-size: 2em;
+    font-size: 2.5em;
     white-space: nowrap;
     overflow: hidden;
   }
 
   .header-top{
+    
     font-size: 1.5em;
     z-index: 101;
     position:fixed;
     width: 100%;
-    height: 80px;
+    height: 84px;
     top:0;
-    background-color: $color-10;
+    font-family: "Neon pixel";
+
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
+    
+    
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     
     nav {
-      padding: 10px;
       width: inherit;
       display: flex;
       align-items: center;
       justify-content: space-between;
       
       ul {
+        
+    font-size: 3em;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -73,11 +101,16 @@ header {
   }
 
   .header-full {
-    top:80px;
+    top:84px;
     height: 0px;
     position: fixed;
     width: 100%;
-    background-color: $color-10;   
+    
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
+    
     color: $color-2;   
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
@@ -87,7 +120,7 @@ header {
     display: none;
   
     &.show {
-      height: calc(100% - 80px);
+      height: calc(100% - 84px);
       opacity: 1;
       display: block;
     }
@@ -102,7 +135,6 @@ header {
         align-items: left;
         justify-content: space-between;
         flex-direction: column;
-        padding-bottom: 80px;
     
         li {
           border-radius: 5px;
@@ -292,6 +324,18 @@ h2 {
     0 0 151px $color-21;
 }
 
+.text-neon-pink {
+  animation: blinking 4s infinite none;
+  
+  color: #F148FB;
+  text-shadow:
+    0 0 0.2em #F148FB,
+    0 0 0.5em #F148FB,
+    0 0 0.8em #F148FB,
+    0 0 1.2em #F148FB,
+    0 0 2.0em #F148FB;
+}
+
 
 
 /***************
@@ -306,7 +350,11 @@ h2 {
   opacity: 0;
   left: 0;
   top:0;
-  color:$color-21;
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
+  
   width: 0px;
   height: 0px;
   position: fixed;
@@ -333,6 +381,56 @@ h2 {
     height: 100%;
     width: 100%;
     opacity: 1;
+  }
+}
+
+@keyframes blinking {
+
+  0% {  
+    color: #F148FB;
+    text-shadow:
+      0 0 0.2em #F148FB,
+      0 0 0.5em #F148FB,
+      0 0 0.8em #F148FB,
+      0 0 1.2em #F148FB,
+      0 0 2.0em #F148FB;
+  }
+  86% {  
+    color: #F148FB;
+    text-shadow:
+      0 0 0.2em #F148FB,
+      0 0 0.5em #F148FB,
+      0 0 0.8em #F148FB,
+      0 0 1.2em #F148FB,
+      0 0 2.0em #F148FB;
+  }
+  
+  87% {
+    color: #3e3a3a;
+    text-shadow: none;
+  }
+  89% {  
+    color: #F148FB;
+    text-shadow:
+      0 0 0.2em #F148FB,
+      0 0 0.5em #F148FB,
+      0 0 0.8em #F148FB,
+      0 0 1.2em #F148FB,
+      0 0 2.0em #F148FB;
+  }
+
+  97% {  
+    color: #F148FB;
+    text-shadow:
+      0 0 0.2em #F148FB,
+      0 0 0.5em #F148FB,
+      0 0 0.8em #F148FB,
+      0 0 1.2em #F148FB,
+      0 0 2.0em #F148FB;
+  }
+  98% {
+    color: #3e3a3a;
+    text-shadow: none;
   }
 }
 
