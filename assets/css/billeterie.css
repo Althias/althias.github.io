@@ -117,6 +117,8 @@ input {
   width: 100%;
   text-align: center;
   color: #F148FB;
+  text-shadow: 0 0 5px #F148FB;
+  box-shadow: 0 0 5px #F148FB, inset 0 0 5px #F148FB;
 }
 
 /*
