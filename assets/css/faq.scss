@@ -1,5 +1,3 @@
-@import "reset";
-
 @font-face {
   font-family: 'aldery';
   src: url('../font/adlery-pro.regular.ttf') format('truetype');
@@ -31,6 +29,8 @@ $color-20: #e5f3f3;
 $color-22: #43f4f1;
 $color-22: #a3ebe8;
 $color-21: rgb(97, 255, 85);
+
+main
 
 .header-faq {
   display: flex;
@@ -120,10 +120,16 @@ $color-21: rgb(97, 255, 85);
 
 
 .scene {
+  background-color: transparent;
   width: 120px;
   height: 70px;
   margin: 40px 0;
   perspective: 600px;
+  rotate: 12deg;
+  
+  position: relative;
+  top:-20px;
+  left: calc(100vw - 180px);
 }
 
 .card {
@@ -136,13 +142,25 @@ $color-21: rgb(97, 255, 85);
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+
 }
 
 .card.is-flipped {
   transform: rotateY(180deg);
+  
+  .card__face--front {
+    opacity: 0;
+  }
+  
+  .card__face--back {
+    opacity: 1;
+  }
+
 }
 
 .card__face {
+  transition: opacity 0s ease 0.3s;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -150,8 +168,6 @@ $color-21: rgb(97, 255, 85);
   text-align: center;
   font-size: 25px;
   font-family: "Clip";
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 
   text-shadow:
     0 0 0.2em #F148FB,
@@ -171,10 +187,12 @@ $color-21: rgb(97, 255, 85);
 }
 
 .card__face--front {
-  background-color: $color-10;
+  background-color: transparent;
+  opacity: 1;
 }
 
 .card__face--back {
-  background-color: $color-10;
+  background-color: transparent;
   transform: rotateY(180deg);
+  opacity: 0;
 }

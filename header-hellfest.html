@@ -26,7 +26,7 @@
           <li>Billeterie</li>
         </ul>
         <div class="element-top">
-          <input onclick="toggleMenu()" value="&#9776;"/></li>
+          <input onclick="toggleMenu()" value="&#9776;"/>
         </div> 
       </div>
     
@@ -64,37 +64,5 @@
     });
   }
 </script>
-<script>
-  const container = document.querySelector(".test1");
-  const element = document.querySelector(".test2");
-
-  function updateElementPosition(event) {
-    const x = event.clientX / container.offsetWidth;
-    const y = event.clientY / container.offsetHeight;
-
-    element.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
-
-    requestAnimationFrame(updateElementPosition);
-  }
-
-  container.addEventListener("mousemove", (event) => {
-    updateElementPosition(event);
-  });
-</script>
-<!--
-<script>
-  const elements = document.querySelectorAll('.follow-mouse');
-
-  document.addEventListener('mousemove', (event) => {
-  elements.forEach((element) => {
-    
-    let left = event.offsetX;
-    let top = event.offsetY;
-    element.style.left = left + 'px';
-    element.style.top = top + 'px';
-  });
-});
-</script>
--->
 </body> 
 </html>

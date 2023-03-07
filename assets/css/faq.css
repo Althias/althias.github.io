@@ -1,97 +1,3 @@
-@charset "UTF-8";
-/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
-/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
-/*─
-/*─                                                                                      RESET
-/*─
-/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
-/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
-* {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: none; /*─ Debug font size on iphone when landscape orientation ─*/
-  -webkit-font-smoothing: subpixel-antialiased; /*─ Debug safari font weight when fixed element on the page ─*/
-  -webkit-font-smoothing: antialiased; /*─ idem : Debug safari font weight when fixed element on the page ─*/
-}
-
-html, body, nav, header, footer, div, span,
-h1, h2, h3, p,
-a, img,
-ul, li,
-table, form, label, input, textarea, select, button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  list-style: none;
-}
-
-input, textarea, select, button {
-  display: block;
-  box-sizing: border-box;
-  border-radius: 0;
-  outline: none;
-  border: none;
-  background: none;
-  color: inherit;
-}
-
-input:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-
-input[type=submit]:hover,
-button:hover {
-  cursor: pointer;
-}
-
-input::-ms-clear {
-  display: none; /*─ IE11 → remove cross to close ─*/
-}
-
-textarea {
-  overflow: auto; /*─ Hide scroll bar on IE ─*/
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img, video, svg, picture {
-  display: block;
-}
-
-img, video {
-  width: 100%;
-  height: auto;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 @font-face {
   font-family: "aldery";
   src: url("../font/adlery-pro.regular.ttf") format("truetype");
@@ -104,13 +10,13 @@ iframe {
   font-family: "clip";
   src: url("../font/Clip.ttf") format("truetype");
 }
-.header-faq {
+main .header-faq {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.header-faq h1 {
+main .header-faq h1 {
   font-size: 2em;
   padding: 10px;
 }
@@ -180,10 +86,15 @@ iframe {
 
 /**********/
 .scene {
+  background-color: transparent;
   width: 120px;
   height: 70px;
   margin: 40px 0;
   perspective: 600px;
+  rotate: 12deg;
+  position: relative;
+  top: -20px;
+  left: calc(100vw - 180px);
 }
 
 .card {
@@ -196,13 +107,21 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 .card.is-flipped {
   transform: rotateY(180deg);
 }
+.card.is-flipped .card__face--front {
+  opacity: 0;
+}
+.card.is-flipped .card__face--back {
+  opacity: 1;
+}
 
 .card__face {
+  transition: opacity 0s ease 0.3s;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -210,8 +129,6 @@ iframe {
   text-align: center;
   font-size: 25px;
   font-family: "Clip";
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB, 0 0 2em #F148FB;
   box-shadow: 0 0 3px #27D1F6, 0 0 13px #27D1F6, inset 0 0 13px #27D1F6;
   border: 1px solid #27D1F6;
@@ -219,10 +136,12 @@ iframe {
 }
 
 .card__face--front {
-  background-color: #141614;
+  background-color: transparent;
+  opacity: 1;
 }
 
 .card__face--back {
-  background-color: #141614;
+  background-color: transparent;
   transform: rotateY(180deg);
+  opacity: 0;
 }/*# sourceMappingURL=faq.css.map */
