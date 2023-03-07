@@ -23,7 +23,7 @@
 $color-1: #27D1F6;
 $color-2: #F148FB;
 $color-3: #f5f5f2;
-$primary-color: #27D1F6;
+$primary-color: #F148FB;
 
 main {
     background-size: cover;
@@ -68,6 +68,11 @@ input {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 columns, each taking up equal space */
+  gap:2em;
+
+  * {
+    width: 100%;
+  }
 }
 
 .grid-3 {
@@ -85,7 +90,7 @@ input {
 .submit-element {
   border: $color-1 0.125em solid;
   padding: 0.125em;
-  width: 40%;
+  width: 100%;
   text-align: center;
 }
 
@@ -125,6 +130,14 @@ input {
       }
     }
   }
+}
+
+.button {
+  border: $color-2 0.125em solid;
+  padding: 0.125em;
+  width: 100%;
+  text-align: center;
+  color: $color-2;
 }
 /*
 

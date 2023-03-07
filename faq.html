@@ -14,38 +14,48 @@
 
 <body>    
 <!-- HEADER -->
-  <header>
-    <section class="header-top">
-      <nav>
-        <div class="header-title">
-          Alambik Festival
-        </div>
-        <ul>
-          <li class="text-neon text-neon-pink">PROGRAMMATION</li>
-          <li class="text-neon text-neon-pink">BILLETERIE</li>
-        </ul>
-        <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
-          &#9776;
-        </div>
-      </nav>
-      <div class="scene">
-        <div class="card">
-          <div class="card__face card__face--front">OPEN</div>
-          <div class="card__face card__face--back">CLOSED</div>
-        </div>
+<header>
+  <section class="header-top">
+    <nav>
+      <!--
+      <div class="header-title">
+        Alambik Festival
       </div>
-    </section>
-    <section class="header-full"> 
-      <nav> 
-        <ul>
-          <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
-          <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
-          <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
-          <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
-        </ul>
-      </nav>
-    </section>
-  </header>
+      -->
+      <ul>
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
+        </li>            
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+        </li>           
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+        </li>
+      </ul>
+      <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </nav>
+    <div class="scene">
+      <div class="sign">
+        <div class="sign__face sign__face--front">OPEN</div>
+        <div class="sign__face sign__face--back">CLOSED</div>
+      </div>
+    </div>
+  </section>
+  <section class="header-full"> 
+    <nav> 
+      <ul>
+        <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+        <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
+        <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
+        <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
 
 <!-- BODY -->
   <main style="margin-top:80px">
@@ -151,7 +161,7 @@
           </li>          
           <li class="collapse-container">
             <h2 class="collapse-toggle">
-              <button>J’ai déjà pris ma place mais je veux réserver un repas supplémentaire .</button><span class="arrow"></span>
+              <button>J’ai déjà pris ma place mais je veux réserver un repas supplémentaire.</button><span class="arrow"></span>
             </h2>
             <div class="collapse-panel">
               <div class="collapse-content">
@@ -407,8 +417,8 @@
   }
 </script>
 
+<!-- CARD OPEN / CLOSED -->
 <script> 
-
   function wait(time) {
     return new Promise(resolve => {
       setTimeout(resolve, time);

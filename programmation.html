@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alambik Festival</title>
     <!-- Feuilles de style CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/faq.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/billeterie.css">
   </head>
   
@@ -22,47 +22,90 @@
           document.querySelector('#header').innerHTML = data;
         });
     </script> -->
-
-
-    <!-- Section Programmation -->
-    <section class="section" id="programmation">
-      <div class="container">
-        <h2 class="text-center">Programmation</h2>
-        <p class="text-center">Découvrez les artistes qui se produiront lors de notre festival</p>
-        <div class="row">
-          <div class="col-md-4">
-            <a href="./programmation/joanne-o-joan.html">
-              <div class="carad card-container">
-                <div class="card-img img-epicer"></div>
-                <div class="card-title">
-                  Chahu
-                </div>
-              </div>
-            </a>
+    <header>
+      <section class="header-top">
+        <nav>
+          <!--
+          <div class="header-title">
+            Alambik Festival
           </div>
-          <div class="col-md-4">          
-            <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container">
-                <div class="card-img img-joj"></div>
-                <div class="card-title">
-                  Joanne o Joan
-                </div>
-              </div>
-            </a>
+          -->
+          <ul>
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./alambik.html">ACCUEIL</a>
+            </li>            
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+            </li>           
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+            </li>
+          </ul>
+          <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+            &#9776;
           </div>
-          <div class="col-md-4">
-            <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container">
-                <div class="card-img img-ciao"></div>
-                <div class="card-title">
-                  Ciao Béatrice
-                </div>
-              </div>
-            </a>
+        </nav>
+        <div class="scene">
+          <div class="sign">
+            <div class="sign__face sign__face--front">OPEN</div>
+            <div class="sign__face sign__face--back">CLOSED</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="header-full"> 
+        <nav> 
+          <ul>
+            <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+            <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
+            <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
+            <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    
+
+    <!-- Section Programmation -->
+    <body>
+      <section class="section" id="programmation">
+        <div class="container">
+          <h2 class="text-center">Programmation</h2>
+          <p class="text-center">Découvrez les artistes qui se produiront lors de notre festival</p>
+          <div class="row">
+            <div class="col-md-4">
+              <a href="./programmation/joanne-o-joan.html">
+                <div class="carad card-container">
+                  <div class="card-img img-epicer"></div>
+                  <div class="card-title">
+                    Chahu
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">          
+              <a href="./programmation/joanne-o-joan.html">
+                <div class="card card-container">
+                  <div class="card-img img-joj"></div>
+                  <div class="card-title">
+                    Joanne o Joan
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="./programmation/joanne-o-joan.html">
+                <div class="card card-container">
+                  <div class="card-img img-ciao"></div>
+                  <div class="card-title">
+                    Ciao Béatrice
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
 
     <!-- Section Footer -->
     <section id="footer"></section>

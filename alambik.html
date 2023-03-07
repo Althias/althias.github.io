@@ -15,33 +15,47 @@
 
 <body>    
 <!-- HEADER -->
-  <header>
-    <section class="header-top">
-      <nav>
-        <div class="header-title">
-          Alambik Festival
-        </div>
-        <ul>
-          <li class="text-neon-pink">PROGRAMMATION</li>
-          <li class="text-neon-pink">BILLETERIE</li>
-        </ul>
-        <div class="header-buger text-neon-blue" onclick="toggleMenu()">
-          &#9776;
-        </div>
-      </nav>
-    </section>
-    <section class="header-full"> 
-      <nav> 
-        <ul>
-          <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
-          <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
-          <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
-          <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
-        </ul>
-      </nav>
-    </section>
-  </header>
-
+<header>
+  <section class="header-top">
+    <nav>
+      <!--
+      <div class="header-title">
+        Alambik Festival
+      </div>
+      -->
+      <ul>
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./alambik.html">ACCUEIL</a>
+        </li>            
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+        </li>           
+        <li class="text-neon text-neon-pink">
+          <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+        </li>
+      </ul>
+      <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </nav>
+    <div class="scene">
+      <div class="sign">
+        <div class="sign__face sign__face--front">OPEN</div>
+        <div class="sign__face sign__face--back">CLOSED</div>
+      </div>
+    </div>
+  </section>
+  <section class="header-full"> 
+    <nav> 
+      <ul>
+        <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+        <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
+        <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
+        <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
+      </ul>
+    </nav>
+  </section>
+</header>
 <!-- BODY -->
   <main style="margin-top:84px">
     

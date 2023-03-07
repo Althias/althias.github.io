@@ -32,18 +32,24 @@
           </div>
           -->
           <ul>
-            <li class="text-neon text-neon-pink">ACCUIEL</li>
-            <li class="text-neon text-neon-pink">PROGRAMMATION</li>
-            <li class="text-neon text-neon-pink">BILLETERIE</li>
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
+            </li>            
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+            </li>           
+            <li class="text-neon text-neon-pink">
+              <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+            </li>
           </ul>
           <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
             &#9776;
           </div>
         </nav>
         <div class="scene">
-          <div class="card">
-            <div class="card__face card__face--front">OPEN</div>
-            <div class="card__face card__face--back">CLOSED</div>
+          <div class="sign">
+            <div class="sign__face sign__face--front">OPEN</div>
+            <div class="sign__face sign__face--back">CLOSED</div>
           </div>
         </div>
       </section>
@@ -66,9 +72,15 @@
       <section id="inscriptions">
         <div class="inscription">
           <form style="padding: 10px;">
-            <div class="form-control">
-              <label for="nom">Nom & Prenom</label>
-              <input type="text" id="nom" required>
+            <div class="grid-2">
+              <div class="form-control">
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" required>
+              </div>
+              <div class="form-control">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" required>
+              </div>
             </div>
             <div class="form-control">
               <label for="email">Email</label>
@@ -96,13 +108,13 @@
               </div>
             </div>
             
-            <div class="form-submit">
+            <div class="form-submit grid-2">
               <div class="form-control submit-element">
-                <label for="message">prix </label>
+                <label for="message">SCORE </label>
                 <span style="padding-left: 1em;" id="total-cost">0$</span>
               </div>
-              <div class="form-control submit-element">
-                <button type="submit" class="btn btn-primary" style="text-align: center;padding: auto;width: 100%;">Envoyer</button>
+              <div class="form-control">
+                <button type="submit" class="button" style="text-align: center;padding: auto;width: 100%;">PLAY</button>
               </div>
             </div>
           </form>
@@ -190,7 +202,7 @@
     });
   }
 
-  var card = document.querySelector('.card');
+  var card = document.querySelector('.sign');
   card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
     setTimeout(toggleNeon, 350);

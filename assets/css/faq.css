@@ -46,6 +46,10 @@ main .header-faq h1 {
   background-color: #212321;
   border-radius: 10px;
   padding: 20px;
+  text-align: left;
+}
+.collapse-container button {
+  text-align: left;
 }
 .collapse-container .collapse-toggle {
   width: 100%;
@@ -97,7 +101,7 @@ main .header-faq h1 {
   left: calc(100vw - 180px);
 }
 
-.card {
+.sign {
   width: 100%;
   height: 100%;
   transition: transform 1s;
@@ -110,17 +114,17 @@ main .header-faq h1 {
   background-color: transparent;
 }
 
-.card.is-flipped {
+.sign.is-flipped {
   transform: rotateY(180deg);
 }
-.card.is-flipped .card__face--front {
+.sign.is-flipped .sign__face--front {
   opacity: 0;
 }
-.card.is-flipped .card__face--back {
+.sign.is-flipped .sign__face--back {
   opacity: 1;
 }
 
-.card__face {
+.sign__face {
   transition: opacity 0s ease 0.3s;
   position: absolute;
   width: 100%;
@@ -135,12 +139,12 @@ main .header-faq h1 {
   color: #F148FB;
 }
 
-.card__face--front {
+.sign__face--front {
   background-color: transparent;
   opacity: 1;
 }
 
-.card__face--back {
+.sign__face--back {
   background-color: transparent;
   transform: rotateY(180deg);
   opacity: 0;
