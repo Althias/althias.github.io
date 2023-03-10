@@ -42,6 +42,8 @@ $color-22: #a3ebe8;
 $color-21: rgb(97, 255, 85);
 
 
+$color-100: rgb(241,26,127);
+
 body{
   background-color: $color-10;
   color: $color-20;
@@ -62,6 +64,14 @@ header {
     overflow: hidden;
   }
 
+  .header-buger {
+    position: absolute;
+    top: 32px;
+    right: 60px;
+    user-select: none;
+    cursor: pointer;
+  }
+
   .header-top{
     
     font-size: 1.5em;
@@ -71,11 +81,13 @@ header {
     height: 84px;
     top:0;
     font-family: "Neon pixel";
-
+    /*
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
     background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
+    */
+    background-color: transparent;
     
     
     align-items: center;
@@ -84,9 +96,6 @@ header {
     
     nav {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       padding: 0 2em 0;
       
       ul {
@@ -94,8 +103,9 @@ header {
         font-size: 3em;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap:20%;
+        justify-content: center;
+        gap:5%;
+        padding: 0 0% 0 5%;
 
       }
     }
@@ -107,11 +117,11 @@ header {
     position: fixed;
     width: 100%;
     
+
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
     background-image: url('../images/pattern/dark-brick-wall-2d-vector-260nw-337691504.jpg');
-    
     color: $color-2;   
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
@@ -162,10 +172,7 @@ header {
     }
   }
 
-  .header-buger {
-    user-select: none;
-    cursor: pointer;
-  }
+
 }
 
 section {
@@ -389,18 +396,18 @@ h2 {
 @keyframes blinking-pink {
 
   0% {  
-    color: #F148FB;
+    color: $color-100;
     text-shadow:
-      0 0 0.2em #F148FB,
-      0 0 0.5em #F148FB,
-      0 0 0.8em #F148FB,
+      0 0 0.2em $color-100,
+      0 0 0.5em $color-100,
+      0 0 0.8em $color-100,
   }
   86% {  
-    color: #F148FB;
+    color: $color-100;
     text-shadow:
-      0 0 0.2em #F148FB,
-      0 0 0.5em #F148FB,
-      0 0 0.8em #F148FB,
+      0 0 0.2em $color-100,
+      0 0 0.5em $color-100,
+      0 0 0.8em $color-100,
   }
   
   87% {
@@ -408,21 +415,21 @@ h2 {
     text-shadow: none;
   }
   89% {  
-    color: #F148FB;
+    color: $color-100;
     text-shadow:
-      0 0 0.2em #F148FB,
-      0 0 0.5em #F148FB,
-      0 0 0.8em #F148FB,
-      0 0 1.2em #F148FB,
+      0 0 0.2em $color-100,
+      0 0 0.5em $color-100,
+      0 0 0.8em $color-100,
+      0 0 1.2em $color-100,
   }
 
   97% {  
-    color: #F148FB;
+    color: $color-100;
     text-shadow:
-      0 0 0.2em #F148FB,
-      0 0 0.5em #F148FB,
-      0 0 0.8em #F148FB,
-      0 0 1.2em #F148FB,
+      0 0 0.2em $color-100,
+      0 0 0.5em $color-100,
+      0 0 0.8em $color-100,
+      0 0 1.2em $color-100,
   }
   98% {
     color: #3e3a3a;

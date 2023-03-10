@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alambik Festival</title>
-  <!-- Feuilles de style CSS -->
-  <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/faq.css">
+  <!-- Feuilles de style CSS 
+  <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>    
@@ -23,10 +22,10 @@
       </div>
       -->
       <ul>
-        <li class="text-neon text-neon-pink">
+        <li class="neon-text text-neon-pink">
           <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
         </li>            
-        <li class="text-neon text-neon-pink">
+        <li class="neon-text text-neon-pink">
           <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
         </li>           
         <li class="text-neon text-neon-pink">
@@ -37,13 +36,13 @@
         &#9776;
       </div>
     </nav>
-    <div class="scene">
-      <div class="sign">
-        <div class="sign__face sign__face--front">OPEN</div>
-        <div class="sign__face sign__face--back">CLOSED</div>
-      </div>
-    </div>
   </section>
+  <div class="sign__scene">
+    <div class="sign">
+      <div class="sign__face sign__face--front">OPEN</div>
+      <div class="sign__face sign__face--back">CLOSED</div>
+    </div>
+  </div>
   <section class="header-full"> 
     <nav> 
       <ul>
@@ -58,7 +57,7 @@
 
 
 <!-- BODY -->
-  <main style="margin-top:80px">
+  <main>
     <section class="faq" style="padding-top: 50px;">
       <div class="header-faq">
         <h1>FAQ</h1>  
@@ -399,10 +398,23 @@
 </script>
 
 <script>
+  function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
+  function empty(){}
+
   function search() {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
     let elements = document.querySelectorAll('.collapse-container');
+    let container = document.querySelector('.container-faq')
+
+    container.classList.remove("filtered");
 
     elements.forEach((element) => {
       if(element.innerHTML.toLowerCase().includes(input) || "" == input){
@@ -414,6 +426,10 @@
         element.style.opacity = 0;
       }
     });
+
+    if(input.length > 0){
+      container.classList.add("filtered");
+    }
   }
 </script>
 
@@ -425,7 +441,7 @@
     });
   }
 
-  var card = document.querySelector('.card');
+  var card = document.querySelector('.sign');
   card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
     setTimeout(toggleNeon, 350);

@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alambik Festival</title>
     <!-- Feuilles de style CSS -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/faq.css"> 
-    <link rel="stylesheet" type="text/css" href="./assets/css/billeterie.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   <body>    
     <!-- Navigation 
@@ -32,27 +30,29 @@
           </div>
           -->
           <ul>
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
             </li>            
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
             </li>           
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
             </li>
           </ul>
-          <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+          <div class="header-buger neon-text" onclick="toggleMenu()">
             &#9776;
           </div>
         </nav>
-        <div class="scene">
-          <div class="sign">
-            <div class="sign__face sign__face--front">OPEN</div>
-            <div class="sign__face sign__face--back">CLOSED</div>
-          </div>
-        </div>
       </section>
+      <!--
+      <div class="sign__scene">
+        <div class="sign">
+          <div class="sign__face sign__face--front neon-text">OPEN</div>
+          <div class="sign__face sign__face--back neon-text">CLOSED</div>
+        </div>
+      </div>
+      -->
       <section class="header-full"> 
         <nav> 
           <ul>
@@ -69,9 +69,9 @@
       
     <main>
       <!-- Inscriptions -->
-      <section id="inscriptions">
-        <div class="inscription">
-          <form style="padding: 10px;">
+      <section>
+        <div class="container-inscription">
+          <form>
             <div class="grid-2">
               <div class="form-control">
                 <label for="prenom">Prenom</label>
@@ -114,7 +114,7 @@
                 <span style="padding-left: 1em;" id="total-cost">0$</span>
               </div>
               <div class="form-control">
-                <button type="submit" class="button" style="text-align: center;padding: auto;width: 100%;">PLAY</button>
+                <button type="submit" class="btn btn-border neon-text neon-border">PLAY</button>
               </div>
             </div>
           </form>
@@ -134,10 +134,9 @@
   </body>
 
 
+<!-- TOTAL COST -->
   <script>      
     function calculateTotal() {
-
-      // Get the value of the selected billet
       const radioButtons = document.getElementsByName('billet');
       let billet;
       radioButtons.forEach(function(button) {
@@ -149,30 +148,21 @@
         billet = 0;
       }
 
-      // Get the value of the carte-conso input field
       let carteConso = parseInt(document.querySelector("#carte-conso").value);
       if (isNaN(carteConso)) {
         carteConso = 0;
       }
       
-      // Get all the selected meal checkboxes
       let meals = document.querySelectorAll("input[name='meal[]']:checked");
       
-      // Calculate the total cost of the meals
       let mealCost = 0;
       meals.forEach(meal => mealCost += parseInt(meal.value));
       
-      // Calculate the total cost of the order
       totalCost = billet + (carteConso * 10) + mealCost;
       
-      // Display the total cost
       document.querySelector("#total-cost").innerHTML = totalCost + "$";     
-    }
-  
-    // Calculate the total cost when the form loads
+    }  
     window.onload = calculateTotal;
-    
-    // Recalculate the total cost when any form field changes
     document.querySelector("form").addEventListener("change", calculateTotal);
   </script>
 
@@ -218,9 +208,26 @@
     elements.forEach((element) => {
       element.classList.toggle("text-neon-blue");
     });
-  }
-
- 
+  } 
 </script>
 
+<!-- TOGGLE MENU -->
+
+  <script>
+    function toggleMenu() {
+      const header = document.querySelector(".header-full");
+      header.classList.toggle("show");
+    
+      let listItems = header.querySelectorAll("li");
+
+      console.log(header);
+      console.log(listItems);
+
+      listItems.forEach(function (item, index) {
+        setTimeout(function () {
+          item.classList.toggle("show");
+        }, index * 100);
+      });
+    }
+  </script>
 </html>

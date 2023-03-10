@@ -10,13 +10,13 @@
   font-family: "clip";
   src: url("../font/Clip.ttf") format("truetype");
 }
-main .header-faq {
+.header-faq {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main .header-faq h1 {
+.header-faq h1 {
   font-size: 2em;
   padding: 10px;
 }
@@ -88,64 +88,4 @@ main .header-faq h1 {
   padding: 10px;
 }
 
-/**********/
-.scene {
-  background-color: transparent;
-  width: 120px;
-  height: 70px;
-  margin: 40px 0;
-  perspective: 600px;
-  rotate: 12deg;
-  position: relative;
-  top: -20px;
-  left: calc(100vw - 180px);
-}
-
-.sign {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.sign.is-flipped {
-  transform: rotateY(180deg);
-}
-.sign.is-flipped .sign__face--front {
-  opacity: 0;
-}
-.sign.is-flipped .sign__face--back {
-  opacity: 1;
-}
-
-.sign__face {
-  transition: opacity 0s ease 0.3s;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 270%;
-  text-align: center;
-  font-size: 25px;
-  font-family: "Clip";
-  text-shadow: 0 0 0.2em #F148FB, 0 0 0.5em #F148FB, 0 0 0.8em #F148FB, 0 0 1.2em #F148FB, 0 0 2em #F148FB;
-  box-shadow: 0 0 3px #27D1F6, 0 0 13px #27D1F6, inset 0 0 13px #27D1F6;
-  border: 1px solid #27D1F6;
-  color: #F148FB;
-}
-
-.sign__face--front {
-  background-color: transparent;
-  opacity: 1;
-}
-
-.sign__face--back {
-  background-color: transparent;
-  transform: rotateY(180deg);
-  opacity: 0;
-}/*# sourceMappingURL=faq.css.map */
+/**********//*# sourceMappingURL=faq.css.map */
