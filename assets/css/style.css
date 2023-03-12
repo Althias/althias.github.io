@@ -358,7 +358,7 @@ input {
 
 .container-programmation {
   background-color: rgb(35, 29, 32);
-  border: 1px black solid;
+  border: 2px rgb(144, 144, 144) solid;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
@@ -423,7 +423,7 @@ input {
 
 .select-details .level {
   margin-left: 20px;
-  font-style: italic;
+  font-style: oblique 30deg;
   font-weight: bold;
   color: rgb(101, 110, 80);
 }
