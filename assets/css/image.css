@@ -27,6 +27,14 @@
     background-image: url('../images/artistes/joj.jpg');
 }
 
+.img-nico {
+    background-image: url('../images/artistes/nicolas.jpg');
+}
+
+.img-mario {
+    background-image: url('../images/artistes/mario.png');
+}
+
 .img-banner {
     background-image: url('../images/alambik_banner.JPG');
 }

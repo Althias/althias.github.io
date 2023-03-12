@@ -107,30 +107,30 @@
           </div>
           <div>
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="epicier">
-                <div class="card-img img-epicier"></div>
+              <div class="card card-container" id="nico">
+                <div class="card-img img-nico"></div>
                 <div class="card-title">
-                  EPICIER
+                  NICOLAS
                 </div>
               </div>
             </a>
           </div>
           <div>          
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="joj">
-                <div class="card-img img-joj"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  JOANNE O JOAN
+                  MARIO
                 </div>
               </div>
             </a>
           </div>
           <div>
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="caub">
-                <div class="card-img img-caub"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  CAUB
+                  MARIO
                 </div>
               </div>
             </a>
@@ -138,40 +138,40 @@
           <div></div>
           <div>
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="epicier">
-                <div class="card-img img-epicier"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  EPICIER
+                  MARIO
                 </div>
               </div>
             </a>
           </div>
           <div>          
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="joj">
-                <div class="card-img img-joj"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  JOANNE O JOAN
+                  MARIO
                 </div>
               </div>
             </a>
           </div>
           <div>
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="caub">
-                <div class="card-img img-caub"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  CAUB
+                  MARIO
                 </div>
               </div>
             </a>
           </div>
           <div>
             <a href="./programmation/joanne-o-joan.html">
-              <div class="card card-container" id="epicier">
-                <div class="card-img img-epicier"></div>
+              <div class="card card-container" id="mario">
+                <div class="card-img img-mario"></div>
                 <div class="card-title">
-                  EPICIER
+                  MARIO
                 </div>
               </div>
             </a>
@@ -185,7 +185,7 @@
           </div>
           <div class="select-details">
             <p class="level">LEVEL</p>
-            <p class="difficulty">VERY HARD</p>
+            <p class="difficulty" id="difficulty">-</p>
             <div class="score">
               <p>HIGH SCORE <span id="high_score">0000000000</span></p>
               <p>TOTAL HIGH SCORE <span id="total_high_score">0000000000</span></p>
@@ -207,33 +207,59 @@
     <script>
         let elements = document.querySelectorAll('.card-container');
         
+        let programmationContainer = document.querySelector('.container-programmation');
+        
+        let selectContainer = document.querySelector('#select-container');             
+        let selectIcon = selectContainer.querySelector('#select-icon');
+        let selectDifficulty = selectContainer.querySelector('#difficulty');
+        let selectTitle = selectContainer.querySelector('#select-img-title');
+        let selectImg = selectContainer.querySelector('#select-img');
+        let selectScore = selectContainer.querySelector('#high_score');
+        let selectTotalScore = selectContainer.querySelector('#total_high_score');
+
+
         elements.forEach((element) => {
           element.addEventListener('mouseenter', function() {
             let img = "img-" + element.id;
             let title = element.querySelector('.card-title').innerHTML;
 
-            let selectContainer = document.querySelector('#select-container'); 
             selectContainer.classList.add('selected')
             
-            let selectIcon = selectContainer.querySelector('#select-icon');
             selectIcon.innerHTML = "HMN" ;
 
-            let selectTitle = selectContainer.querySelector('#select-img-title');
+            if(element.id == "nico") {
+              selectDifficulty.innerHTML = "VERY LOOOOOW"  
+            } else {
+              selectDifficulty.innerHTML = "VERY HARD";
+            }
+            
+
             selectTitle.innerHTML = title;
 
-            let selectImg = selectContainer.querySelector('#select-img');
             selectImg.className = "";
             selectImg.classList.add("select-img");
             selectImg.classList.add(img);
           
-            let selectScore = selectContainer.querySelector('#high_score');
             var score = Math.floor(Math .random() * (9999 + 1));
             selectScore.innerHTML = "0".repeat(10 - score.toString().length) + score;
 
-            let selectTotalScore = selectContainer.querySelector('#total_high_score');
             var Totalscore = Math.floor(Math .random() * (9999999 - score + 1)) + score;
             selectTotalScore.innerHTML ="0".repeat(10 - Totalscore.toString().length) + Totalscore;
           });          
+        });
+
+        programmationContainer.addEventListener('mouseleave', function() {
+            selectContainer.classList.remove('selected')
+            selectIcon.innerHTML = "N/A" ;
+            selectDifficulty.innerHTML = "-";
+            selectTitle.innerHTML = "";
+
+            selectImg.className = "";
+            selectImg.classList.add("select-img");
+            selectImg.classList.add("select-img-default");
+          
+            selectScore.innerHTML = "0000000000";
+            selectTotalScore.innerHTML ="0000000000";
         });
     </script>
   </body>
