@@ -224,6 +224,7 @@ input {
   }
 }
 
+
 .form-submit {
   display: flex;
   align-items: center;
@@ -284,7 +285,96 @@ input {
 
 
 
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 columns, each taking up equal space */
+  justify-content: center;
+  gap:10px
+}
 
+.container-programmation {
+  background-color: rgb(35, 29, 32);
+  border: 1px black solid;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-img-border {
+  border: 2px rgb(144, 144, 144) solid;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+.select-img {
+  width:165px;
+  height: 200px;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  margin:5px;
+}
+
+.select-img-title {
+  border: 2px white solid;
+  position: absolute;
+  bottom:15px;
+  border-radius: 1px;
+  width:fit-content;
+  white-space: nowrap;
+  background-color: rgba(black, 0.8);
+  padding:3px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+.select-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.select-details {
+  .level {
+    font-style: italic;
+    color: rgb(101,110,80);
+  }
+
+  .difficulty {
+    text-align: center;
+    width:200px;
+    color:red;
+    border: 2px rgb(101,110,80) solid;
+    border-radius: 10px;
+    padding: 0 20px;
+  }
+
+  .score {
+    text-align: right;
+    color: rgb(159, 159, 159);
+    span {
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+
+
+/**************************
+***************************
+***************************
+**************************/
 
 
 .header-faq {

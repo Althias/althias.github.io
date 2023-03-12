@@ -9,8 +9,7 @@
     <!-- Feuilles de style CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/faq.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/billeterie.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   
   <body>    
@@ -31,82 +30,190 @@
           </div>
           -->
           <ul>
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
             </li>            
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
             </li>           
-            <li class="text-neon text-neon-pink">
+            <li class="neon-text">
               <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
             </li>
           </ul>
-          <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+          <div class="header-buger neon-text" onclick="toggleMenu()">
             &#9776;
           </div>
         </nav>
-        <div class="scene">
-          <div class="sign">
-            <div class="sign__face sign__face--front">OPEN</div>
-            <div class="sign__face sign__face--back">CLOSED</div>
-          </div>
-        </div>
       </section>
+      <!--
+      <div class="sign__scene">
+        <div class="sign">
+          <div class="sign__face sign__face--front neon-text">OPEN</div>
+          <div class="sign__face sign__face--back neon-text">CLOSED</div>
+        </div>
+      </div>
+      -->
       <section class="header-full"> 
         <nav> 
           <ul>
-            <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
-            <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
-            <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
-            <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
+            <li class="header-full-element" data-id="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+            <li class="header-full-element" data-id="BILLETERIE"><span>BILLETERIE</span></li>
+            <li class="header-full-element" data-id="INFORMATIONS"><span>INFORMATIONS</span></li>
+            <li class="header-full-element" data-id="SOUVENIRS"><span>SOUVENIRS</span></li>
           </ul>
         </nav>
       </section>
     </header>
-    
 
     <!-- Section Programmation -->
-    <body>
-      <section class="section" id="programmation">
-        <div class="container">
+    <main>
+      <section class="container-programmation">
+        <div>
+          <!--
           <h2 class="text-center">Programmation</h2>
           <p class="text-center">Découvrez les artistes qui se produiront lors de notre festival</p>
-          <div class="row">
-            <div class="col-md-4">
-              <a href="./programmation/joanne-o-joan.html">
-                <div class="carad card-container">
-                  <div class="card-img img-epicer"></div>
-                  <div class="card-title">
-                    Chahu
-                  </div>
+          -->
+        </div>
+        <div class="container-cards">
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="epicier">
+                <div class="card-img img-epicier"></div>
+                <div class="card-title">
+                  EPICIER
                 </div>
-              </a>
-            </div>
-            <div class="col-md-4">          
-              <a href="./programmation/joanne-o-joan.html">
-                <div class="card card-container">
-                  <div class="card-img img-joj"></div>
-                  <div class="card-title">
-                    Joanne o Joan
-                  </div>
+              </div>
+            </a>
+          </div>
+          <div>          
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="joj">
+                <div class="card-img img-joj"></div>
+                <div class="card-title">
+                  JOANNE O JOAN
                 </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="./programmation/joanne-o-joan.html">
-                <div class="card card-container">
-                  <div class="card-img img-ciao"></div>
-                  <div class="card-title">
-                    Ciao Béatrice
-                  </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="caub">
+                <div class="card-img img-caub"></div>
+                <div class="card-title">
+                  CAUB
                 </div>
-              </a>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="epicier">
+                <div class="card-img img-epicier"></div>
+                <div class="card-title">
+                  EPICIER
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>          
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="joj">
+                <div class="card-img img-joj"></div>
+                <div class="card-title">
+                  JOANNE O JOAN
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="caub">
+                <div class="card-img img-caub"></div>
+                <div class="card-title">
+                  CAUB
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="epicier">
+                <div class="card-img img-epicier"></div>
+                <div class="card-title">
+                  EPICIER
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>          
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="joj">
+                <div class="card-img img-joj"></div>
+                <div class="card-title">
+                  JOANNE O JOAN
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="caub">
+                <div class="card-img img-caub"></div>
+                <div class="card-title">
+                  CAUB
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="epicier">
+                <div class="card-img img-epicier"></div>
+                <div class="card-title">
+                  EPICIER
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>          
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="joj">
+                <div class="card-img img-joj"></div>
+                <div class="card-title">
+                  JOANNE O JOAN
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="./programmation/joanne-o-joan.html">
+              <div class="card card-container" id="caub">
+                <div class="card-img img-caub"></div>
+                <div class="card-title">
+                  CAUB
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="select-container">
+          <div class="select-img-border">
+              <div class="select-img img-joj" id="select-img"></div>
+              <div class="select-img-title">
+                JOANNE O JOAN
+              </div>
+          </div>
+          <div class="select-details">
+            <p class="level">LEVEL</p>
+            <p class="difficulty">VERY HARD</p>
+            <div class="score">
+              <p>HIGH SCORE <span id="high_score">0000000000</span></p>
+              <p>TOTAL HIGH SCORE <span id="total_high_score">0000015698</span></p>
             </div>
           </div>
         </div>
       </section>
-    </body>
-
+    </main>
     <!-- Section Footer -->
     <section id="footer"></section>
     <script>
@@ -114,6 +221,33 @@
         .then(response => response.text())
         .then(data => {
       document.querySelector('#footer').innerHTML = data;
+        });
+    </script>
+
+    <script>
+        let elements = document.querySelectorAll('.card-container');
+        
+        elements.forEach((element) => {
+          element.addEventListener('mouseenter', function() {
+            let img = "img-" + element.id;
+            let title = element.querySelector('.card-title').innerHTML;
+
+            let selectTitle = document.querySelector('.select-img-title');
+            selectTitle.innerHTML = title;
+
+            let selectImg = document.querySelector('#select-img');
+            selectImg.className = "";
+            selectImg.classList.add("select-img");
+            selectImg.classList.add(img);
+          
+            let selectScore = document.querySelector('#high_score');
+            var score = Math.floor(Math .random() * (9999 + 1));
+            selectScore.innerHTML = "0".repeat(10 - score.toString().length) + score;
+
+            let selectTotalScore = document.querySelector('#total_high_score');
+            var Totalscore = Math.floor(Math .random() * (9999999 - score + 1)) + score;
+            selectTotalScore.innerHTML ="0".repeat(10 - Totalscore.toString().length) + Totalscore;
+          });          
         });
     </script>
   </body>
