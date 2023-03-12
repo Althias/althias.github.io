@@ -435,6 +435,13 @@ input {
   opacity: 1;
 }
 
+.select-details {
+  padding: 10px;
+  width: 300px;
+}
+.select-details .special {
+  margin-bottom: 10px;
+}
 .select-details .level {
   margin-left: 20px;
   font-style: oblique 30deg;
@@ -459,7 +466,33 @@ input {
   font-weight: bold;
   color: white;
 }
+.select-details .insert-coin {
+  margin-top: 20px;
+  animation: insert-coin 1.5s infinite;
+  text-align: center;
+}
 
+.separator {
+  height: 1px;
+  border: 1px white solid;
+  width: 100%;
+  margin: 10px 0;
+}
+
+@keyframes insert-coin {
+  0% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /**************************
 ***************************
 ***************************

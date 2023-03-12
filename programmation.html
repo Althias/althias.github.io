@@ -184,12 +184,15 @@
             <div class="select-img-title" id="select-img-title"></div>
           </div>
           <div class="select-details">
+            <p class="special" id="special">COUP SPECIAL : ULTRA-RYTHMIQUE</p>
+            <p class="separator"></p>
             <p class="level">LEVEL</p>
             <p class="difficulty" id="difficulty">-</p>
             <div class="score">
               <p>HIGH SCORE <span id="high_score">0000000000</span></p>
               <p>TOTAL HIGH SCORE <span id="total_high_score">0000000000</span></p>
             </div>
+            <p class="insert-coin">INSERT COIN</p>
           </div>
         </div>
       </section>
@@ -210,6 +213,7 @@
         let programmationContainer = document.querySelector('.container-programmation');
         
         let selectContainer = document.querySelector('#select-container');             
+        let selectSpecial = selectContainer.querySelector('#special');      
         let selectIcon = selectContainer.querySelector('#select-icon');
         let selectDifficulty = selectContainer.querySelector('#difficulty');
         let selectTitle = selectContainer.querySelector('#select-img-title');
@@ -226,11 +230,13 @@
             selectContainer.classList.add('selected')
             
             if(element.id == "nico") {
-              selectDifficulty.innerHTML = "VERY LOOOOOW"  
+              selectDifficulty.innerHTML = "VERY LOOOOOW";
               selectIcon.innerHTML = "RIP";
+              selectSpecial.innerHTML = "COUP SPECIAL : FAIRE LE MORT";
             } else {
               selectIcon.innerHTML = "HMN";
               selectDifficulty.innerHTML = "VERY HARD";
+              selectSpecial.innerHTML = "COUP SPECIAL : ULTRA-RYTHMIQUE";
             }
             
 

@@ -381,6 +381,12 @@ input {
 }
 
 .select-details {
+  padding:10px;
+  width:300px;
+
+  .special {
+    margin-bottom: 10px;
+  }
 
   .level {
     margin-left: 20px;
@@ -408,9 +414,36 @@ input {
       color: white;
     }
   }
+
+  .insert-coin {
+    margin-top: 20px;
+    animation: insert-coin 1.5s infinite;
+    text-align: center;
+  }
 }
 
+.separator {
+  height: 1px;
+  border: 1px white solid;
+  width: 100%;
+  margin: 10px 0;
 
+}
+
+@keyframes insert-coin {
+  0% {  
+    opacity: 1;
+  }
+  69% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 /**************************
 ***************************
