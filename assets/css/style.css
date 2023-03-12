@@ -248,7 +248,7 @@ header .header-full nav ul li.show {
 }
 header .header-full nav ul li:hover {
   color: #A6024E;
-  background-color: #F2DE33;
+  background-color: rgb(242, 223, 48);
 }
 
 /**************************
@@ -353,7 +353,7 @@ input {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 3 columns, each taking up equal space */
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .container-programmation {
@@ -375,8 +375,18 @@ input {
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
   position: relative;
+}
+
+.select-icon {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  background-color: rgb(242, 223, 48);
+  font-weight: 700;
+  color: rgb(121, 112, 24);
+  padding: 0 4px;
+  box-shadow: 4px 4px rgb(121, 112, 24);
 }
 
 .select-img {
@@ -393,8 +403,8 @@ input {
   position: absolute;
   bottom: 15px;
   border-radius: 1px;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 150px;
+  text-align: center;
   white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 3px;
@@ -407,14 +417,18 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
   gap: 10px;
 }
 
 .select-details .level {
+  margin-left: 20px;
   font-style: italic;
+  font-weight: bold;
   color: rgb(101, 110, 80);
 }
 .select-details .difficulty {
+  margin-left: 30px;
   text-align: center;
   width: 200px;
   color: red;
@@ -423,6 +437,7 @@ input {
   padding: 0 20px;
 }
 .select-details .score {
+  padding-top: 10px;
   text-align: right;
   color: rgb(159, 159, 159);
 }

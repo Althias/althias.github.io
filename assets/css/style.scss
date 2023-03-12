@@ -5,7 +5,8 @@ $color-pri: #F11A7F;
 $color-pri-dark: #A6024E;
 $color-sec: #02D1F2;
 $color-sec-dark: #0A90A6;
-$color-ter: #F2DE33;
+$color-ter: rgb(242, 223, 48);
+$color-ter-dark: rgb(121, 112, 24);
 $color-black: hsl(332, 98%, 3%);
 $color-white: hsl(188, 98%, 97%);
 
@@ -289,7 +290,7 @@ input {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 3 columns, each taking up equal space */
   justify-content: center;
-  gap:10px
+  gap:5px
 }
 
 .container-programmation {
@@ -308,8 +309,21 @@ input {
   border: 2px rgb(144, 144, 144) solid;
   width: fit-content;
   height: fit-content;
-  overflow: hidden;
+  
   position: relative;
+}
+
+.select-icon {
+  position:absolute;
+  top:-7px;
+  left:-7px;
+  background-color: $color-ter;
+  font-weight: 700;
+  color: $color-ter-dark;
+  padding: 0 4px;
+  box-shadow: 4px 4px $color-ter-dark;
+  
+ 
 }
 
 .select-img {
@@ -326,7 +340,8 @@ input {
   position: absolute;
   bottom:15px;
   border-radius: 1px;
-  width:fit-content;
+  width:150px;
+  text-align: center;
   white-space: nowrap;
   background-color: rgba(black, 0.8);
   padding:3px;
@@ -340,17 +355,21 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  opacity: 0;
   gap: 10px;
 }
 
 .select-details {
+
   .level {
+    margin-left: 20px;
     font-style: italic;
+    font-weight: bold;
     color: rgb(101,110,80);
   }
 
   .difficulty {
+    margin-left: 30px;
     text-align: center;
     width:200px;
     color:red;
@@ -360,6 +379,7 @@ input {
   }
 
   .score {
+    padding-top: 10px;
     text-align: right;
     color: rgb(159, 159, 159);
     span {
