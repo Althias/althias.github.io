@@ -7,6 +7,8 @@ $color-sec: #02D1F2;
 $color-sec-dark: #0A90A6;
 $color-ter: rgb(242, 223, 48);
 $color-ter-dark: rgb(121, 112, 24);
+$color-grey: rgb(100, 100, 100);
+$color-grey-dark: rgb(40, 40, 40);
 $color-black: hsl(332, 98%, 3%);
 $color-white: hsl(188, 98%, 97%);
 
@@ -315,16 +317,19 @@ input {
 
 .select-icon {
   position:absolute;
+  text-align: center;
   top:-7px;
-  left:-7px;
-  background-color: $color-ter;
+  left:-7px;  
+  height: 18px;
+  width: 45px;
+  background-color: $color-grey;
   font-weight: 700;
-  color: $color-ter-dark;
+  color: $color-grey-dark;
   padding: 0 4px;
-  box-shadow: 4px 4px $color-ter-dark;
-  
- 
+  box-shadow: 4px 4px $color-grey-dark;
 }
+
+
 
 .select-img {
   width:165px;
@@ -333,9 +338,14 @@ input {
   background-position: center; 
   background-repeat: no-repeat;
   margin:5px;
+
+  &.select-img-default {
+    background-color: $color-grey;
+  }
 }
 
 .select-img-title {
+  opacity: 0;
   border: 2px white solid;
   position: absolute;
   bottom:15px;
@@ -355,8 +365,19 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
   gap: 10px;
+
+  &.selected {
+    .select-icon {
+      box-shadow: 4px 4px $color-ter-dark;
+      color: $color-ter-dark;
+      background-color: $color-ter;
+    }
+
+    .select-img-title {
+      opacity: 1;
+    }
+  }
 }
 
 .select-details {

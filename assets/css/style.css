@@ -380,13 +380,16 @@ input {
 
 .select-icon {
   position: absolute;
+  text-align: center;
   top: -7px;
   left: -7px;
-  background-color: rgb(242, 223, 48);
+  height: 18px;
+  width: 45px;
+  background-color: rgb(100, 100, 100);
   font-weight: 700;
-  color: rgb(121, 112, 24);
+  color: rgb(40, 40, 40);
   padding: 0 4px;
-  box-shadow: 4px 4px rgb(121, 112, 24);
+  box-shadow: 4px 4px rgb(40, 40, 40);
 }
 
 .select-img {
@@ -397,8 +400,12 @@ input {
   background-repeat: no-repeat;
   margin: 5px;
 }
+.select-img.select-img-default {
+  background-color: rgb(100, 100, 100);
+}
 
 .select-img-title {
+  opacity: 0;
   border: 2px white solid;
   position: absolute;
   bottom: 15px;
@@ -417,8 +424,15 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
   gap: 10px;
+}
+.select-container.selected .select-icon {
+  box-shadow: 4px 4px rgb(121, 112, 24);
+  color: rgb(121, 112, 24);
+  background-color: rgb(242, 223, 48);
+}
+.select-container.selected .select-img-title {
+  opacity: 1;
 }
 
 .select-details .level {
