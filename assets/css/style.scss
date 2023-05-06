@@ -332,14 +332,15 @@ input {
 
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 3 columns, each taking up equal space */
+  grid-template-columns: repeat(5, 1fr); /* 3 columns, each taking up equal space */
   justify-content: center;
   gap:5px
 }
 
 .container-programmation {
   background-color: rgb(35, 29, 32);
-  border: 2px rgb(144, 144, 144) solid;
+  border: 3px rgb(144, 144, 144) solid;
+  border-radius: 2px;
   width: fit-content;
   margin: auto;
   padding: 20px;
@@ -678,7 +679,7 @@ input {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 h2 {

@@ -156,8 +156,8 @@ body {
       CARD 
 ****************/
 .card-container {
-  height: 90px;
-  width: 90px;
+  height: 120px;
+  width: 120px;
   overflow: hidden;
   position: relative;
   grid-column: span 2;
@@ -201,7 +201,7 @@ body {
   justify-content: flex-end;
   padding: 4px;
   position: absolute;
-  font-size: 8px;
+  font-size: 0.75em;
   text-align: center;
   color: #e5f3f3;
   background-color: rgba(0, 0, 0, 0.7);

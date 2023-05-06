@@ -81,8 +81,8 @@ body{
 ****************/
 
 .card-container {
-  height: 90px;
-  width:90px;
+  height: 120px;
+  width:120px;
   overflow: hidden;
   position: relative;  
   grid-column: span 2;
@@ -126,7 +126,7 @@ body{
   justify-content: flex-end;
   padding: 4px;
   position: absolute;
-  font-size: 8px;
+  font-size: 0.75em;
   text-align: center; 
   color: $color-20;   
   background-color: rgba(black,0.7);
