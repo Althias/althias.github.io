@@ -150,6 +150,7 @@ main section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1em 0;
 }
 
 .btn {
@@ -326,6 +327,16 @@ input {
   gap: 5%;
 }
 .grid-3 * {
+  width: 100%;
+}
+
+.grid-4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
+  gap: 5%;
+}
+.grid-4 * {
   width: 100%;
 }
 
@@ -675,6 +686,25 @@ input {
   text-align: center;
   margin: 0px 10%;
 }
-.prog-container p {
+
+p {
   margin: 1em 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.menu {
+  padding: 0 20%;
+  text-align: center;
+}
+
+.menu-header {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
 }/*# sourceMappingURL=style.css.map */

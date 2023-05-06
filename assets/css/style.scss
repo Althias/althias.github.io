@@ -48,6 +48,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1em 0;
     }
 }
 
@@ -252,6 +253,16 @@ input {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up equal space */
+  gap: 5%;
+  * {
+    width: 100%;
+  }
+}
+
+.grid-4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
   gap: 5%;
   * {
     width: 100%;
@@ -494,7 +505,6 @@ input {
     font-size: 2em;
     padding: 10px;
     color:$color-pri;
-
   }
 }
 
@@ -664,7 +674,27 @@ input {
   text-align: center;
   margin: 0px 10%;
 
-  p {
-    margin: 1em 0;
-  }
+
+}
+
+p {
+  margin: 1em 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.menu {
+  padding: 0 20%;
+  text-align: center;
+}
+
+.menu-header {
+  width:100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
 }
