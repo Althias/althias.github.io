@@ -131,12 +131,18 @@ body {
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(241, 26, 127, 0) 100vh, #0f0007 120vh), url("../images/background/bg_city_retro.jpg");
+  background-color: black;
+  color: white;
+  /*
+    background-image: -webkit-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
+    background-image:  -moz-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
+    background-image:  -o-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
+    background-image:  -ms-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
+    background-image:  linear-gradient(rgba($color-pri, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
+  */
 }
 
 main {
-  padding-top: 150px;
-  min-height: 100vh;
   font-family: "Oxanium", sans-serif;
   font-size: 1em;
 }
@@ -169,14 +175,11 @@ main section {
 ***************************
 **************************/
 header {
-  font-family: "Neon pixel";
-  position: fixed;
+  font-family: "arcade";
   width: 100%;
 }
 header .header-top {
-  color: #F11A7F;
   position: relative;
-  font-size: 4em;
   width: 100%;
   top: 0;
   align-items: center;
@@ -192,16 +195,31 @@ header .header-top nav ul {
   gap: 1em;
   padding: 0 0 0 1.25em;
 }
+header .header-top nav ul .gaming {
+  font-size: 2em;
+  color: rgb(242, 223, 48);
+  font-family: "arcade";
+}
+header .header-top nav ul .neon {
+  font-size: 3em;
+  color: #F11A7F;
+  font-family: "Neon pixel";
+}
+header .header-top nav ul .clip {
+  font-size: 2.5em;
+  color: #02D1F2;
+  font-family: "Clip";
+}
 header .header-top nav .header-buger {
-  position: absolute;
-  font-size: 0.5em;
-  top: 1.25em;
+  position: fixed;
+  font-size: 2em;
+  top: 0.875em;
   right: 2em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
-  color: #02D1F2;
+  color: white;
 }
 header .header-full {
   height: 0px;
@@ -262,11 +280,22 @@ header .header-full nav ul li:hover {
   font-family: "Arcade";
   font-size: 1em;
   color: #02D1F2;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   margin-top: 10px;
   padding: 10px;
+}
+.container-inscription::before {
+  content: "";
+  background-image: rgba(0, 0, 0, 0.8), url("../images/pattern/black-brick-wall-textured-background_53876-63572.avif");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 .form-control {
@@ -475,8 +504,8 @@ input {
 .separator {
   height: 1px;
   border: 1px white solid;
-  width: 100%;
-  margin: 10px 0;
+  width: 40%;
+  margin: 10px 30%;
 }
 
 @keyframes insert-coin {
@@ -640,4 +669,12 @@ input {
   background-color: transparent;
   transform: rotateY(180deg);
   opacity: 0;
+}
+
+.prog-container {
+  text-align: center;
+  margin: 0px 10%;
+}
+.prog-container p {
+  margin: 1em 0;
 }/*# sourceMappingURL=style.css.map */

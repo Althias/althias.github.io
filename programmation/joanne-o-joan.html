@@ -7,34 +7,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alambik Festival</title>
     <!-- Feuilles de style CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/image.css">
   </head>
 
   <body>    
-     <!-- Navigation -->
-     <section id="navigation"></section>
-     <script>
-       fetch('../assets/html/navigation.html')
-         .then(response => response.text())
-         .then(data => {
-           document.querySelector('#navigation').innerHTML = data;
-         });
-     </script>
+    <!-- Navigation -->
+    <section id="navigation"></section>
+    <script>
+      fetch('../assets/html/navigation.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#navigation').innerHTML = data;
+        });
+    </script>
 
-    <!-- Section  -->
-    <section id="joanne-o-joan" style="padding-top: 20px;padding-bottom: 40px;">
-        <div class="container">
-            <h2 class="text-center">Joanne O Joan</h2>  
-            <div class="separator-1"></div>
-            <p class="text-center">pop</p>     
-            <iframe class="player" width="560" height="315" src="https://www.youtube.com/embed/fWNGDArLd4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Joanne O Joan se revendique autant de Camille que de Billie Eilish ou de Yelle. La pop électronique du duo peut en effet se vanter de mettre en avant les mêmes qualités entendues chez ses célèbres modèles : fraîcheur, groove et forte personnalité.</p>
-        </div> 
-    </section>
-    <section class="parallax img-joj">
-    </section>
+    <header>
+      <section class="header-top">
+        <nav>
+          <!--
+          <div class="header-title">
+            Alambik Festival
+          </div>
+          -->
+          <ul>
+            <li class="gaming">
+              <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
+            </li>            
+            <li class="neon neon-text">
+              <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+            </li>           
+            <li class="clip neon-text">
+              <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+            </li>
+          </ul>
+          <div class="header-buger neon-text" onclick="toggleMenu()">
+            &#9776;
+          </div>
+        </nav>
+      </section>
+      <!--
+      <div class="sign__scene">
+        <div class="sign">
+          <div class="sign__face sign__face--front neon-text">OPEN</div>
+          <div class="sign__face sign__face--back neon-text">CLOSED</div>
+        </div>
+      </div>
+      -->
+      <section class="header-full"> 
+        <nav> 
+          <ul>
+            <li class="header-full-element" data-id="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+            <li class="header-full-element" data-id="BILLETERIE"><span>BILLETERIE</span></li>
+            <li class="header-full-element" data-id="INFORMATIONS"><span>INFORMATIONS</span></li>
+            <li class="header-full-element" data-id="SOUVENIRS"><span>SOUVENIRS</span></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+     <main>
+
+      <!-- Section  -->
+      <section id="joanne-o-joan">
+          <div class="prog-container">
+            <p>
+              <h2 class="text-center">[ARTISTE]</h2>  
+            </p>
+            <div class="separator"></div>
+            <p class="text-center">[GENRE]</p>     
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+          </div> 
+      </section>
+      <section class="img img-joj">
+      </section>
+    </main>
 
     <!-- Section Footer -->
     <section id="footer"></section>

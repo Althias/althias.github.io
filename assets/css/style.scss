@@ -13,6 +13,7 @@ $color-black: hsl(332, 98%, 3%);
 $color-white: hsl(188, 98%, 97%);
 
 $background-image:  url('../images/background/bg_city_retro.jpg');
+$background-image-bottom:  url('../images/background/bg_city_retro-bottom.jpg');
 
 :root {
   scrollbar-color: #470120 #0f0007;
@@ -21,23 +22,24 @@ $background-image:  url('../images/background/bg_city_retro.jpg');
 
 body {
   background-size: 100%;
+
   background-position: top;
   background-repeat: no-repeat;
+  background-color: black;
+  color:white;
 //  background-image: $background-image;
-
+/*
   background-image: -webkit-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   background-image:  -moz-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   background-image:  -o-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   background-image:  -ms-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   background-image:  linear-gradient(rgba($color-pri, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
-
+*/
 }
 
 
 
 main {
-    padding-top: 150px;
-    min-height: 100vh;
     font-family: "Oxanium", sans-serif;
     font-size: 1em;
 
@@ -80,14 +82,11 @@ main {
 
 
 header {
-  font-family: "Neon pixel";
-  position: fixed;
+  font-family: "arcade"; //Neon pixel
   width: 100%;
 
-  .header-top{  
-    color:$color-pri;  
+  .header-top{   
     position:relative;
-    font-size:4em;
     width: 100%;
     top:0;    
     align-items: center;
@@ -102,16 +101,35 @@ header {
         justify-content: center;
         gap:1em;
         padding: 0 0 0 1.25em;
+
+        .gaming {
+          font-size:2em; // 4em
+          color:$color-ter; 
+          font-family: "arcade"; //Neon pixel
+        }
+
+        .neon {
+          font-size:3em; // 4em
+          color:$color-pri; 
+          font-family: "Neon pixel";
+        }
+
+        .clip {
+          
+          font-size:2.5em; // 4em
+          color:$color-sec; 
+          font-family: "Clip";
+        }
       }
 
       .header-buger {  
-        position: absolute;
-        font-size: 0.5em;
-        top: 1.25em;
+        position: fixed;
+        font-size: 2em;
+        top: 0.875em;
         right: 2em;
         user-select: none;
         cursor: pointer;
-        color:$color-sec;
+        color:white;
       }
     }
   }
@@ -190,10 +208,23 @@ header {
   font-family: "Arcade";
   font-size: 1em;
   color: $color-sec;
-  background-color: rgba(0, 0, 0, .7);
+  //opacity: 1;
+  background-color: rgba(0, 0, 0, .8);
   backdrop-filter: blur(20px);
   margin-top: 10px;
   padding: 10px;
+
+  &::before {    
+    content: "";
+    background-image: rgba(0,0,0,.8), url("../images/pattern/black-brick-wall-textured-background_53876-63572.avif");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
 }
 
 .form-control {
@@ -425,8 +456,9 @@ input {
 .separator {
   height: 1px;
   border: 1px white solid;
-  width: 100%;
-  margin: 10px 0;
+  width: 40%;
+  margin: 10px 30%;
+
 
 }
 
@@ -627,3 +659,12 @@ input {
 }
 
 
+
+.prog-container {
+  text-align: center;
+  margin: 0px 10%;
+
+  p {
+    margin: 1em 0;
+  }
+}

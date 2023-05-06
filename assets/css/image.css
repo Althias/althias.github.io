@@ -11,6 +11,17 @@
     padding-top: 40px;
 }
 
+.img {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 300px; 
+    width: 300px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
 .img-caub {
     background-image: url('../images/artistes/CAUB.jpg');
 }
@@ -27,8 +38,8 @@
     background-image: url('../images/artistes/joj.jpg');
 }
 
-.img-nico {
-    background-image: url('../images/artistes/nicolas.jpg');
+.img-nicolas {
+    background-image: url('../images/artistes/petit_nicolas.jpg');
 }
 
 .img-mario {

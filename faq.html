@@ -37,12 +37,14 @@
       </div>
     </nav>
   </section>
+  <!--
   <div class="sign__scene">
     <div class="sign">
       <div class="sign__face sign__face--front">OPEN</div>
       <div class="sign__face sign__face--back">CLOSED</div>
     </div>
   </div>
+  -->
   <section class="header-full"> 
     <nav> 
       <ul>
@@ -67,7 +69,7 @@
       </div>
       <div class="container-faq">
         <ul>
-          <li class="collapse-container">
+          <li class="collapse-container toto">
             <h2 class="collapse-toggle">
               <button>Où se déroule le festival ?</button><span class="arrow"></span>
             </h2>
@@ -357,7 +359,7 @@
               </div>
             </div>
           </li>          
-          <li class="collapse-container">
+          <li class="collapse-container toto">
             <h2 class="collapse-toggle">
               <button>Drogues</button><span class="arrow"></span>
             </h2>
@@ -435,6 +437,7 @@
 
 <!-- CARD OPEN / CLOSED -->
 <script> 
+/*
   function wait(time) {
     return new Promise(resolve => {
       setTimeout(resolve, time);
@@ -458,7 +461,74 @@
       element.classList.toggle("text-neon-blue");
     });
   }
+*/
+</script>
+<script>
+  const scrollElements = document.querySelectorAll('.collapse-container');
+  let input = document.getElementById('searchbar').value
 
- 
+  window.addEventListener('scroll', function() {
+    scrollElements.forEach(function(element) {
+      let pos = element.getBoundingClientRect().top;
+
+      const ratioEffect = 1/2;
+      let screen = window.innerHeight;
+      let page = document.body.scrollHeight;
+      let scroll = window.scrollY;
+
+      if(scroll > screen - pos){
+        let ratio_1 = (screen - pos) / (screen * ratioEffect);
+        let ratio_2 = ((scroll + screen * (1 + ratioEffect)) - page) / (screen * ratioEffect);
+        let ratio = Math.pow(Math.max(ratio_1, ratio_2),2);
+        
+        let opacity = Math.max(0, Math.min(1, ratio));;
+        element.style.opacity = opacity;
+      }
+      /*
+      const elementPosition = element.getBoundingClientRect().top;
+
+      const screenEffect = 1/2;
+      const viewportHeight = window.innerHeight;
+
+      
+      if(window.scrollY > viewportHeight-elementPosition){
+        let ratio_1 = (viewportHeight-elementPosition) / (viewportHeight*screenEffect);
+        let ratio_2 = (window.scrollY + elementPosition) / document.body.scrollHeight;
+        let ratio = Math.max(ratio_1, ratio_2);
+        
+        let opacity = Math.max(0, Math.min(1, ratio));;
+        element.style.opacity = opacity;
+        
+        //let translate = Math.max(0, Math.min(20, 20*ratio));;
+        //element.style.transform = `translateY(-${translate}%)`;
+      }
+      */
+    });
+  });
 </script>
 </html>
+
+<!--
+scrollElements.forEach(function(element) {
+  let pos = element.getBoundingClientRect().top;
+
+  const screenEffect = 1/2;
+  let screenH = window.innerHeight;
+  let pageH = document.body.scrollHeight;
+  let scroll = window.screenY;
+  
+  if(scroll > screenH-pos){
+    let ratio_1 = (screenH-pos) / (screenH*screenEffect);
+    let ratio_2 = 0;
+    console.log("[" + ratio_1 + " - " + ratio_2);  
+    //((scroll + pos) - pageH) / (screenH*screenEffect);
+    let ratio = Math.max(ratio_1, ratio_2);
+    
+    let opacity = Math.max(0, Math.min(1, ratio));;
+    element.style.opacity = opacity;
+    
+    //let translate = Math.max(0, Math.min(20, 20*ratio));;
+    //element.style.transform = `translateY(-${translate}%)`;
+  }
+});
+-->
