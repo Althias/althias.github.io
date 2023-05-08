@@ -7,120 +7,64 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alambik Festival</title>
   <!-- Feuilles de style CSS -->
-  <link rel="stylesheet" type="text/css" href="./assets/css/alambik.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 </head>
 
-<body>    
-<!-- HEADER -->
-<header>
-  <section class="header-top">
-    <nav>
-      <!--
-      <div class="header-title">
-        Alambik Festival
-      </div>
-      -->
-      <ul>
-        <li class="text-neon text-neon-pink">
-          <a class="alk-nav nav-link" href="./alambik.html">ACCUEIL</a>
-        </li>            
-        <li class="text-neon text-neon-pink">
-          <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
-        </li>           
-        <li class="text-neon text-neon-pink">
-          <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
-        </li>
-      </ul>
-      <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
-        &#9776;
-      </div>
-    </nav>
-    <div class="scene">
+<body style="position:relative">    
+  <!-- HEADER -->
+  <header style="position: relative;">
+    <section class="header-top">
+      <nav>
+        <!--
+        <div class="header-title">
+          Alambik Festival
+        </div>
+        -->
+        <ul>
+          <li class="gaming">
+            <a class="alk-nav nav-link" href="./faq.html">ACCUEIL</a>
+          </li>            
+          <li class="neon neon-text">
+            <a class="alk-nav nav-link" href="./programmation.html">PROGRAMMATION</a>
+          </li>           
+          <li class="clip neon-text">
+            <a class="alk-nav nav-link" href="./inscription.html">BILLETERIE</a>
+          </li>
+        </ul>
+        <div class="header-buger neon-text" onclick="toggleMenu()">
+          &#9776;
+        </div>
+      </nav>
+    </section>
+    <!--
+    <div class="sign__scene">
       <div class="sign">
-        <div class="sign__face sign__face--front">OPEN</div>
-        <div class="sign__face sign__face--back">CLOSED</div>
+        <div class="sign__face sign__face--front neon-text">OPEN</div>
+        <div class="sign__face sign__face--back neon-text">CLOSED</div>
       </div>
     </div>
-  </section>
-  <section class="header-full"> 
-    <nav> 
-      <ul>
-        <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
-        <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
-        <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
-        <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
-      </ul>
-    </nav>
-  </section>
-</header>
+    -->
+    <section class="header-full"> 
+      <nav> 
+        <ul>
+          <li class="header-full-element" data-id="PROGRAMMATION"><span>PROGRAMMATION</span></li>
+          <li class="header-full-element" data-id="BILLETERIE"><span>BILLETERIE</span></li>
+          <li class="header-full-element" data-id="INFORMATIONS"><span>INFORMATIONS</span></li>
+          <li class="header-full-element" data-id="SOUVENIRS"><span>SOUVENIRS</span></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
 <!-- BODY -->
-  <main style="margin-top:84px">
-    
-    <section class="home" style="height: 500px;">
-      <div class="section-container2" style="width:100%">
-        <div class="section-container" style="padding-left: 10px;color:#e0ffea;font-weight: bold;width:fit-content;height: fit-content;display:flex;flex-direction: column;align-items: center;align-content: center;position:absolute;right: 50px;top: 50px;z-index: 10;background-color: transparent;">
-          <h2>L'Alambik Festival</h2>
-          <p>
-            <h1>3ème édition de cet incontournable de l'été</h1>
-            <h1>On vous attend nombreux du 12 au 14 Août</h1>
-          </p> 
-        </div>
-        <div style="position:absolute;width:1200px;top: 0;left: 0px;opacity: 0.8;">
-          <img src="./assets/images/festival/programmation.JPG">
-        </div>  
-      </div>
-    </section>
-    
-    <section class="programmation">
-      <div class="container">
-        <h1>Programmation</h1>
-        <p>
-          <div>Cette année se seront X groupes et artites qui se produiront sur scène</div>
-        </p>   
-        <div class="grid-container">
-          <div class="card card-container">
-            <div class="card-img img-caub"></div>
-            <div class="card-title">
-              Chahu
-            </div>
-          </div>
-          <div class="card card-container">
-            <div class="card-img img-epicier"></div>
-            <div class="card-title">
-              Epicier
-            </div>
-          </div>
-          <div class="card card-container">
-            <div class="card-img img-mtl"></div>
-            <div class="card-title">
-              Not From Mtl.
-            </div>
-          </div>
-          <div class="card card-container">
-            <div class="card-img img-joj"></div>
-            <div class="card-title">
-              Joanne o Joan
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="billeterie">
-      <div class="container-billeterie img-banner">
-        <div class="button-billeterie">
-          <p>Inscrivez vous</p>
-        </div>
-      </div>
-    </section>
-    
-    <section class="infos">
-      <h1>Fonctionnement du festival</h1>
-      <div>Réservation de la place et des repas à l'inscription</div>
-      <div>Paiement sur place pour les boissons</div>
+  <main>
+    <section id="poster" >
+
+
+      <div class="poster img-poster"></div>
     </section>
   </main>
 
@@ -130,10 +74,10 @@
   </footer>
 </body  >
 
-<!-- ANIMATION -->
+<!-- ANIMATION 
   <div class="wrap-loader">
     <div class="text-neon-blue">Alambik Festival</div>
-  </div>
+  </div>-->
 
   <script>
     function toggleMenu() {

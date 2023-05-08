@@ -129,6 +129,7 @@ iframe {
 
 body {
   background-size: 100%;
+  min-height: 100vh;
   background-position: top;
   background-repeat: no-repeat;
   background-color: black;
@@ -140,6 +141,10 @@ body {
     background-image:  -ms-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
     background-image:  linear-gradient(rgba($color-pri, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   */
+  padding: 0 10%;
+  background-position: center;
+  background-size: auto;
+  background-image: linear-gradient(rgba(15, 0, 7, 0.7), rgba(15, 0, 7, 0.7) 100vh), url("../images/icon/pac_man.gif");
 }
 
 main {
@@ -434,8 +439,8 @@ input {
 }
 
 .select-img {
-  width: 165px;
-  height: 200px;
+  width: 20vh;
+  height: 25vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -450,10 +455,13 @@ input {
   border: 2px white solid;
   position: absolute;
   bottom: 15px;
+  font-size: 1em;
   border-radius: 1px;
-  width: 150px;
+  width: 130px;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-wrap: break-word;
   text-align: center;
-  white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 3px;
   left: 50%;
@@ -482,6 +490,7 @@ input {
 }
 .select-details .special {
   margin-bottom: 10px;
+  text-align: center;
 }
 .select-details .level {
   margin-left: 20px;
@@ -685,10 +694,6 @@ input {
 .prog-container {
   text-align: center;
   margin: 0px 10%;
-}
-
-p {
-  margin: 0.5em 0;
 }
 
 h2 {
