@@ -485,16 +485,15 @@ input {
 }
 .select-details .level {
   margin-left: 20px;
-  font-style: oblique 30deg;
   font-weight: bold;
-  color: rgb(101, 110, 80);
+  color: #F11A7F;
 }
 .select-details .difficulty {
   margin-left: 30px;
   text-align: center;
   width: 200px;
-  color: red;
-  border: 2px rgb(101, 110, 80) solid;
+  color: #02D1F2;
+  border: 2px #F11A7F solid;
   border-radius: 10px;
   padding: 0 20px;
 }

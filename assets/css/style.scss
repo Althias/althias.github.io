@@ -433,17 +433,16 @@ input {
 
   .level {
     margin-left: 20px;
-    font-style: oblique 30deg;
     font-weight: bold;
-    color: rgb(101,110,80);
+    color: $color-pri;
   }
 
   .difficulty {
     margin-left: 30px;
     text-align: center;
     width:200px;
-    color:red;
-    border: 2px rgb(101,110,80) solid;
+    color:$color-sec;
+    border: 2px $color-pri solid;
     border-radius: 10px;
     padding: 0 20px;
   }
