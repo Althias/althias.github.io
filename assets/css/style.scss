@@ -129,7 +129,7 @@ header {
 
         .neon {
           font-size:3em; // 4em
-          color:$color-pri; 
+          color:$color-ter; 
           font-family: "Neon pixel";
         }
 
@@ -559,7 +559,6 @@ input {
   margin: auto;
   background-color: $color-pri-dark;
   border-radius: 10px;
-  padding: 20px;
   text-align: left;
 
   button {
@@ -568,6 +567,7 @@ input {
 
 
   .collapse-toggle {
+    padding: 20px;
     width:100%;
     font-weight: bold;
     display: flex;
@@ -594,6 +594,7 @@ input {
   }
 
   .collapse-panel {
+
     overflow: hidden;
     width:100%;
     max-height: 0px;
@@ -601,7 +602,7 @@ input {
   }
 
   .collapse-content {
-    margin-top: 10px;
+    padding: 0 20px 20px  20px ;
   }
 }
 
