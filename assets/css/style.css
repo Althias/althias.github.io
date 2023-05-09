@@ -171,6 +171,15 @@ main section {
 .neon-text {
   text-shadow: 0 0 0.5em;
 }
+.neon-text.pri {
+  color: #F11A7F;
+}
+.neon-text.sec {
+  color: #02D1F2;
+}
+.neon-text.ter {
+  color: rgb(242, 223, 48);
+}
 
 .neon-border {
   box-shadow: 0 0 0.25em, inset 0 0 0.5em;
@@ -208,12 +217,10 @@ header .header-top nav ul .gaming {
 }
 header .header-top nav ul .neon {
   font-size: 3em;
-  color: rgb(242, 223, 48);
   font-family: "Neon pixel";
 }
 header .header-top nav ul .clip {
   font-size: 2.5em;
-  color: rgb(242, 223, 48);
   font-family: "Clip";
 }
 header .header-top nav .header-buger {

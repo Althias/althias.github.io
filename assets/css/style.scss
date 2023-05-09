@@ -84,6 +84,16 @@ main {
 .neon-text {
   text-shadow:
     0 0 0.5em;
+
+    &.pri {
+      color:$color-pri; 
+    }
+    &.sec {
+      color:$color-sec; 
+    }
+    &.ter {
+      color:$color-ter; 
+    }
 }
 
 .neon-border {
@@ -129,14 +139,12 @@ header {
 
         .neon {
           font-size:3em; // 4em
-          color:$color-ter; 
           font-family: "Neon pixel";
         }
 
         .clip {
           
           font-size:2.5em; // 4em
-          color:$color-ter; 
           font-family: "Clip";
         }
       }
