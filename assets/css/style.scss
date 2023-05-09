@@ -15,7 +15,7 @@ $color-ter: rgb(242, 223, 48);
 $color-ter-dark: rgb(121, 112, 24);
 $color-grey: rgb(100, 100, 100);
 $color-grey-dark: rgb(40, 40, 40);
-$color-black: hsl(332, 98%, 3%);
+$color-black: hsl(0, 0%, 0%);
 $color-white: hsl(188, 98%, 97%);
 
 //$background-image:  url('../images/background/bg_city_retro.jpg');
@@ -51,7 +51,7 @@ body {
   background-image:  -moz-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
   background-image:  -o-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
   background-image:  -ms-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
-  background-image:  linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7) 100vh), $background-image;
+  background-image:  linear-gradient(rgba($color-black, 1), rgba($color-black, 0.95) 100px,rgba($color-black, 0.8) 150px,rgba($color-black, 0.7) 100vh), $background-image;
 }
 
 
