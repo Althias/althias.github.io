@@ -18,6 +18,23 @@ $color-grey-dark: rgb(40, 40, 40);
 $color-black: hsl(0, 0%, 0%);
 $color-white: hsl(188, 98%, 97%);
 
+$color-3: #65282e;
+$color-3b: #552127;
+$color-4: #B7245C;
+$color-5: #edcbb1;
+
+$color-10: #141614;
+$color-11: #161716;
+$color-12: #212321;
+
+$color-20: #e5f3f3;
+$color-22: #43f4f1;
+$color-22: #a3ebe8;
+$color-21: rgb(97, 255, 85);
+
+
+$color-100: rgb(241,26,127);
+
 //$background-image:  url('../images/background/bg_city_retro.jpg');
 //$background-image:  url('../images/affiche_alambik.jpg');
 $background-image:  url('../images/icon/pac_man.gif');
@@ -29,9 +46,12 @@ $background-image-bottom:  url('../images/background/bg_city_retro-bottom.jpg');
 }
 
 body {
+
+  display: flex;
+  flex-direction: column;
   background-size: 100%;
   min-height: 100vh;
-  background-position: top;
+  max-width: 100vw !important;
   background-repeat: no-repeat;
   background-color: black;
   color:white;
@@ -44,29 +64,27 @@ body {
   background-image:  -ms-linear-gradient(rgba(0,0,0, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
   background-image:  linear-gradient(rgba($color-pri, 0) 100vh,rgba($color-black, 1) 120vh), $background-image;
 */
-  padding: 0 10%;
-  background-position: center;  
-  background-size: auto;
-  background-image: -webkit-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7) 100vh), $background-image;
-  background-image:  -moz-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
-  background-image:  -o-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
-  background-image:  -ms-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
-  background-image:  linear-gradient(rgba($color-black, 1), rgba($color-black, 0.95) 100px,rgba($color-black, 0.8) 150px,rgba($color-black, 0.7) 100vh), $background-image;
+  &.pac-man {
+    background-position: center;  
+    background-image: -webkit-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7) 100vh), $background-image;
+    background-image:  -moz-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
+    background-image:  -o-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
+    background-image:  -ms-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0.7)), $background-image;
+    background-image:  linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), $background-image;
+  }
 }
 
 
 
 main {
-
   font-family: "Oxanium", sans-serif;
-    font-size: 1em;
-
-
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: auto;
     section {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1em 0;
     }
 }
 
@@ -82,18 +100,45 @@ main {
 }
 
 .neon-text {
-  text-shadow:
-    0 0 0.5em;
-
+  animation: glowing 4s infinite none;
+  
     &.pri {
-      color:$color-pri; 
+      color:$color-pri;   
+
     }
     &.sec {
-      color:$color-sec; 
+      color:$color-sec;   
+
     }
     &.ter {
-      color:$color-ter; 
+      color:$color-ter;   
+
     }
+}
+
+@keyframes glowing {
+
+  0% {  
+    text-shadow:
+      0 0 0.2em,
+      0 0 0.5em,
+      0 0 0.8em,
+  }
+  
+  50% {  
+    text-shadow:
+      0 0 0.2em,
+      0 0 0.5em,
+      0 0 0.8em,
+      0 0 1.2em,
+  }
+
+  100% {  
+    text-shadow:
+      0 0 0.2em,
+      0 0 0.5em,
+      0 0 0.8em,
+  }
 }
 
 .neon-border {
@@ -108,56 +153,76 @@ main {
 ***************************
 **************************/
 
+.clip {
+  font-family: "Clip";
+}
 
+.aldery {
+  font-family: "aldery";
+}
 
-header {
-  font-family: "arcade"; //Neon pixel
+footer {  
   width: 100%;
+  background-image: -webkit-linear-gradient(rgba($color-black, 0),rgba($color-black, 0.7));
+  background-image:  -moz-linear-gradient(rgba($color-black, 0),rgba($color-black, 0.7));
+  background-image:  -o-linear-gradient(rgba($color-black, 0),rgba($color-black, 0.7));
+  background-image:  -ms-linear-gradient(rgba($color-black, 0),rgba($color-black, 0.7));
+  background-image:  linear-gradient(rgba($color-black,  0), rgba($color-black, 0.7));
+
+  padding-top: 5vh;
+  padding-bottom:20px;
+}
+
+header {  
+  width: 100%;
+  background-image: -webkit-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0));
+  background-image:  -moz-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0));
+  background-image:  -o-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0));
+  background-image:  -ms-linear-gradient(rgba($color-black, 0.7),rgba($color-black, 0));
+  background-image:  linear-gradient(rgba($color-black,  0.7), rgba($color-black, 0));
+
+  padding-bottom: 5vh;
 
   .header-top{   
-    position:relative;
     width: 100%;
     top:0;    
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
     
     nav {
-      width: 100%;
+      align-items: center;
+      width: 100%;  
+      position: relative;
       
       ul {
         display: flex;
         align-items: center;
         justify-content: center;
         gap:1em;
-        padding: 0 0 0 1.25em;
 
-        .gaming {
-          font-size:2em; // 4em
-          color:$color-ter; 
-          font-family: "arcade"; //Neon pixel
-        }
-
-        .neon {
-          font-size:3em; // 4em
-          font-family: "Neon pixel";
-        }
-
-        .clip {
-          
-          font-size:2.5em; // 4em
-          font-family: "Clip";
+        li {
+          font-size: 2.5em;
         }
       }
 
       .header-buger {  
-        position: fixed;
-        font-size: 2em;
-        top: 0.625em;
-        right: 2em;
+        z-index: 101;
+        position: absolute;
+        font-size: 35px;
+        top: -3px;
+        right: 5vw;
         user-select: none;
         cursor: pointer;
         color:white;
       }
+
+      .return-action {
+        z-index: 99;
+        position: absolute;
+        font-size: 40px;
+        top: 0;
+        left: 5vw;
+      }      
     }
   }
 
@@ -165,9 +230,8 @@ header {
     height: 0px;
     top:0px;
     position: fixed;
-    width: fit-content;
-    background-color: #470120;
-    color: $color-pri;   
+    width: 100vw;
+    background-color: black; 
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
     display: none;
@@ -176,6 +240,7 @@ header {
       height: 100%;
       opacity: 1;
       display: block;
+      z-index: 100;
     }
     
     nav {
@@ -183,31 +248,17 @@ header {
       padding: 20px;   
   
       ul {
+        padding: 15% 0;
         height: 100%;
         display: flex;
         align-items: left;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: column;
     
         li {
-          border-radius: 5px;
           padding-left: 10px;
           padding-right: 10px;
-          width: min-content;
-          transform: translateY(300%);
-          transition: transform 0s ease-in-out 1s;
-          opacity: 0;
-
-          &.show {
-            transform: translateY(0%);  
-            transition: transform 0.75s ease-in-out 0.25s, opacity 0.25s ease-in-out 0.25s;
-            opacity: 1;
-          }
-
-          &:hover {
-            color: $color-pri-dark;   
-            background-color: $color-ter;  
-          }
+          font-size: 2em;
         }
       }
     }
@@ -230,15 +281,14 @@ header {
 
 .container-inscription {
   border: $color-sec 0.125em solid;
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
+  width: 95%;
   font-family: "Arcade";
   font-size: 1em;
   color: $color-sec;
   //opacity: 1;
   background-color: rgba(0, 0, 0, .8);
   backdrop-filter: blur(20px);
-  margin-top: 10px;
   padding: 10px;
 
   &::before {    
@@ -358,9 +408,15 @@ input {
 
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 3 columns, each taking up equal space */
-  justify-content: center;
-  gap:5px
+  grid-template-columns: repeat(6, 1fr); /* 3 columns, each taking up equal space */
+  justify-items: end;
+  gap:5px;
+
+  div {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
 }
 
 .container-programmation {
@@ -453,7 +509,7 @@ input {
 
 .select-details {
   padding:10px;
-  width:300px;
+  width:350px;
 
   .special {
     margin-bottom: 10px;
@@ -701,7 +757,7 @@ input {
 
 
 .prog-container {
-  text-align: center;
+//  text-align: center;
   margin: 0px 10%;
 
 
@@ -725,3 +781,280 @@ h1 {
   text-align: center;
   font-size: 2em;
 }
+
+.text-center { 
+  text-align: center;
+}
+
+label[for="prenom"]::after, label[for="nom"]::after, label[for="email"]::after, label[for="billet"]::after {
+  content: "*"; /* Display asterisk or any icon you prefer */
+  font-size: 1em;
+  margin-left: 4px; /* Adjust the spacing from the label */
+}
+
+/***************
+      CARD 
+****************/
+
+.card-container {
+  min-height:130px;
+  min-width:130vh;
+  height:18vh;
+  width:18vh;
+  overflow: hidden;
+  position: relative;  
+  grid-column: span 2;
+  justify-self: center;
+
+  /*
+  &:hover {
+
+    .card-title {    
+      color: $color-2;
+      text-decoration: none;
+    }
+
+    .card-img{
+      transform: scale(1.2);
+    }
+  }
+  */
+}
+
+.card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+}
+
+.card-title{
+  opacity: 0;
+  display: none;
+
+  position: relative;
+  bottom:0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 4px;
+  position: absolute;
+  font-size: 0.75em;
+  text-align: center; 
+  color: $color-20;   
+  background-color: rgba(black,0.7);
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(144, 144, 144);
+  background-clip: border-box;
+  border: 2px solid transparent;
+  border-radius: .25rem;
+}
+
+
+.mobile {
+  opacity: 0;
+  display: none;
+}  
+
+.galery {
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  color:#000;
+  font-family: 'Homemade Apple', cursive;
+  font-size:20px;
+
+  li{
+    text-align:center;
+    display:inline-block;
+    list-style:none;
+    position:relative;
+    border:solid 12px #fff;
+    background:#fff;
+    box-shadow:0 0 15px 0px #555;
+    transition:all 1s ease;
+    -o-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -webkit-transition:all 1s ease;
+    top:30px;
+  }
+
+  .dark-filter {
+    width: fit-content;
+    height: fit-content;
+    background-color: #000;
+  }
+
+  li:hover{
+    top:0px;    
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  li:nth-child(4n){
+      transform:rotate(10deg);
+  }
+
+  li:nth-child(4n+1){
+      transform:rotate(-3deg);
+  }
+
+  li:nth-child(4n+2){
+      transform:rotate(-10deg);
+  }
+
+  li:nth-child(4n+3){
+      transform:rotate(20deg);
+  }
+
+  p{
+    margin: 12px 0 0 0;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    opacity: 0.9;
+  }
+}
+
+
+/***************
+  BREAK POINT 
+****************/
+@media only screen and (max-width:800px) {
+
+  .galery {
+    img {
+      opacity: 1;
+      width: 130px;
+    }
+
+    li{
+      border:solid 12px #fff;
+    }
+
+    p {
+      margin: 9px 0 0 0;
+    }
+  }
+
+
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns, each taking up equal space */
+  }
+
+  .select-container {
+    opacity: 0;
+    display: none;
+  }
+
+  .card-title {
+    opacity: 1;
+    display: block;
+  }
+
+
+  .mobile {
+    opacity: 1;
+    display: block;
+  }  
+  
+  .laptop {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+.modal {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  border: $color-sec 0.125em solid;
+  font-family: "Arcade";
+  font-size: 1em;
+  color: $color-sec;
+  background-color: rgba(0, 0, 0);
+
+  button {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+
+
+@media only screen and (min-width:800px)  and (max-width:1200px) {
+
+  .container-cards {
+    grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
+  }
+
+  .mobile {
+    opacity: 1;
+    display: block;
+  }  
+  
+  .laptop {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+

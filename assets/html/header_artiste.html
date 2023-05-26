@@ -1,0 +1,53 @@
+<header>
+  <section class="header-top">
+    <nav>
+      <div class="return-action neon-text mobile">
+        <a href="/artistes.php">&lt;</a>
+      </div>
+      <ul>
+        <li class="clip neon-text pri laptop">
+          <a href="/">ACCUEIL</a>
+        </li>            
+        <li class="clip neon-text sec laptop">
+          <a href="/artistes.php">ARTISTES</a>
+        </li>           
+        <li class="clip neon-text ter laptop">
+          <a href="/inscription.php">BILLETTERIE</a>
+        </li>
+        <li class="clip neon-text pri mobile">
+          <a href="/">ALAMBIK</a>
+        </li>  
+      </ul>
+      <div class="header-buger neon-text" onclick="toggleMenu()">
+        &#9776;
+      </div>
+    </nav>
+  </section>
+  <div class="header-full"> 
+    <nav> 
+      <ul>
+        <li class="clip neon-text sec mobile">
+          <a href="/artistes.php">ARTISTES</a>
+        </li>
+        <li class="clip neon-text sec mobile">
+          <a href="/inscription.php">BILLETERIE</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/infos-utiles.php">INFOS UTILES</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/annees-precedentes.php">ANNEES PRECEDENTES</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/faq.php">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    function toggleMenu() {
+      const header = document.querySelector(".header-full");
+      header.classList.toggle("show");
+    }
+  </script>
+</header>

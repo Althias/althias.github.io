@@ -1,0 +1,92 @@
+body {
+  background: url("https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+.infos-utiles h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.infos-utiles p {
+  font-family: "Reenie Beanie";
+  font-size: 1rem;
+}
+.infos-utiles ul, .infos-utiles li {
+  list-style: none;
+}
+.infos-utiles li {
+  width: -moz-fit-content;
+  width: fit-content;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  padding-top: 20px;
+}
+.infos-utiles ul {
+  margin-left: 30px;
+  margin-right: 30px;
+  -moz-columns: 4;
+       columns: 4;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px; /* Adjust the desired gap size */
+}
+.infos-utiles ul li .postit {
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  padding: 1em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-6deg);
+  transition: transform 0.15s linear;
+}
+.infos-utiles ul li:nth-child(even) .postit {
+  transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+  background: #cfc;
+}
+.infos-utiles ul li:nth-child(3n) .postit {
+  transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
+  background: #ccf;
+}
+.infos-utiles ul li:nth-child(5n) .postit {
+  transform: rotate(5deg);
+  position: relative;
+  top: -10px;
+}
+.infos-utiles ul li .postit:hover, .infos-utiles ul li .postit:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  position: relative;
+  z-index: 5;
+}
+.infos-utiles ul li {
+  margin: 1em;
+}
+
+@media only screen and (max-width: 701px) {
+  .infos-utiles ul {
+    -moz-columns: 1;
+         columns: 1;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1051px) {
+  .infos-utiles ul {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+@media only screen and (min-width: 1051px) and (max-width: 1401px) {
+  .infos-utiles ul {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}/*# sourceMappingURL=info.css.map */

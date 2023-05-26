@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- En-tête de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alambik Festival</title>
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/image.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/gravity.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  </head>
+
+  <body>    
+    
+    <section>
+      <nav>
+        <ul> 
+          <div class="menu">
+            <div class="container">
+              <div class="element">
+                PROGRAMMATION
+              </div>
+              <div class="element-sub">
+                PROGRAMMATION
+              </div>
+            </div>
+            <div class="container">
+              <div class="element">
+                BILLETERIE
+              </div>
+              <div class="element-sub">
+                BILLETERIE
+              </div>
+            </div>
+            <div class="container">
+              <div class="element">
+                INFORMATIONS
+              </div>
+              <div class="element-sub">
+                INFORMATIONS
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </section>
+    <script>
+      const elements = document.querySelectorAll(".element");
+
+      const gravityFactor = 0.5; // Change this constant to control the position of the element
+      const gravityFactorSub = 0.1; // Change this constant to control the position of the element
+      
+
+      function updateElementPosition(event) {
+        const element = event.target;
+        const container = element.closest(".container");
+
+
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const containerRect = container.getBoundingClientRect();
+        const containerX = containerRect.left + (containerRect.width / 2);
+        const containerY = containerRect.top + (containerRect.height / 2);
+
+        const x = (mouseX - containerX) * gravityFactor;
+        const y = (mouseY - containerY) * gravityFactor;
+
+        element.style.transform = `translate(${x}px, ${y}px)`;
+        
+        const elementSub = container.querySelector(".element-sub");
+        if(elementSub != null){
+          const subX = (mouseX - containerX) * gravityFactorSub;
+          const subY = (mouseY - containerY) * gravityFactorSub;
+
+          elementSub.style.transform = `translate(${subX}px, ${subY}px)`;
+        }
+      }
+
+      elements.forEach((element) => {
+        element.addEventListener("mousemove", (event) => {
+          updateElementPosition(event);
+        });
+
+        element.addEventListener("mouseleave", () => {
+          element.style.transform = `translate(0px, 0px)`;
+          
+          const elementSub = element.closest(".container").querySelector(".element-sub");
+          if(elementSub != null){
+          
+            elementSub.style.transform = `translate(0px, 0px)`;
+          }
+        });
+
+
+      });
+
+    </script>
+
+  </body> 
+</html>

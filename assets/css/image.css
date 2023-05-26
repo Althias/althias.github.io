@@ -15,6 +15,17 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+    height: 350px; 
+    width: 350px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.img-full {
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
     height: 300px; 
     width: 300px;
     display: block; 
@@ -26,42 +37,110 @@
     background-size: contain; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: 80vh; 
+    height: 70vh; 
     width: 100%;
     display: block; 
     margin-left: auto; 
     margin-right: auto;
 }
 
+.icon {
+    background-color: inherit;
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 30px; 
+    width: 30px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/***********
+*  VISUEL  *
+***********/
 
 .img-poster  {
-    background-image: url('../images/affiche_alambik_censored.jpg');
+    background-image: url('/assets/images/affiche_alambik.jpg');
 }
 
-.img-caub {
-    background-image: url('../images/artistes/CAUB.jpg');
+
+.img-banner {
+    background-image: url('../images/alambik_banner.JPG');
 }
 
-.img-epicier {
-    background-image: url('../images/artistes/Epicier.jpg');
+/************
+*  ARTISTE  *
+************/
+
+
+.img-beinjamin-prejence {
+    background-image: url('/assets/images/artistes/beinjamin-prejence.jpg');
 }
 
-.img-mtl {
-    background-image: url('../images/artistes/MTL.jpg');
+.img-antoine-clem {
+    background-image: url('/assets/images/artistes/antoine-clem.jpeg');
 }
 
-.img-joj {
-    background-image: url('../images/artistes/joj.jpg');
+.img-antoine {
+    background-image: url('/assets/images/artistes/antoine.jpg');
 }
 
-.img-nicolas {
-    background-image: url('../images/artistes/petit_nicolas.jpg');
+.img-leonard {
+    background-image: url('/assets/images/artistes/leonard.jpg');
 }
+
+.img-ilyes {
+    background-image: url('/assets/images/artistes/ilyes.jpg');
+}
+
+.img-theophile {
+    background-image: url('/assets/images/artistes/theophile.jpg');
+}
+
+.img-peuto {
+    background-image: url('/assets/images/artistes/peuto.png');
+}
+
+.img-caresse-express {
+    background-image: url('/assets/images/artistes/caresse-express.png');
+}
+
+.img-duane-forrest {
+    background-image: url('/assets/images/artistes/duane-forrest.jpg');
+}
+
+
+/**********
+*  PERSO  *
+**********/
 
 .img-mario {
     background-image: url('../images/artistes/mario.png');
 }
 
-.img-banner {
-    background-image: url('../images/alambik_banner.JPG');
+
+
+/*********
+*  ICON  *
+*********/
+
+.icon-instagram {
+    background-image: url('/assets/images/icon/instagram.png');
+}
+
+.icon-youtube {
+    background-image: url('/assets/images/icon/youtube.png');
+}
+
+.icon-facebook {
+    background-image: url('/assets/images/icon/facebook.png');
+}
+
+.icon-spotify {
+    background-image: url('/assets/images/icon/spotify.png');
+}
+
+.icon-soundcloud {
+    background-image: url('/assets/images/icon/soundcloud.png');
 }

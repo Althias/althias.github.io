@@ -1,50 +1,50 @@
 <header>
   <section class="header-top">
     <nav>
-      <div class="header-title">
-        Alambik Festival
-      </div>
       <ul>
-        <li class="text-neon text-neon-pink">PROGRAMMATION</li>
-        <li class="text-neon text-neon-pink">BILLETERIE</li>
+        <li class="clip neon-text pri laptop">
+          <a href="/">ACCUEIL</a>
+        </li>            
+        <li class="clip neon-text sec laptop">
+          <a href="/artistes.php">ARTISTES</a>
+        </li>           
+        <li class="clip neon-text ter laptop">
+          <a href="/inscription.php">BILLETTERIE</a>
+        </li>
+        <li class="clip neon-text pri mobile">
+          <a href="/">ALAMBIK</a>
+        </li>  
       </ul>
-      <div class="header-buger text-neon text-neon-blue" onclick="toggleMenu()">
+      <div class="header-buger neon-text" onclick="toggleMenu()">
         &#9776;
       </div>
     </nav>
-    <div class="scene">
-      <div class="card">
-        <div class="card__face card__face--front">OPEN</div>
-        <div class="card__face card__face--back">CLOSED</div>
-      </div>
-    </div>
   </section>
-  <section class="header-full"> 
+  <div class="header-full"> 
     <nav> 
       <ul>
-        <li class="header-full-element" data-value="PROGRAMMATION"><span>PROGRAMMATION</span></li>
-        <li class="header-full-element" data-value="BILLETERIE"><span>BILLETERIE</span></li>
-        <li class="header-full-element" data-value="INFORMATIONS"><span>INFORMATIONS</span></li>
-        <li class="header-full-element" data-value="SOUVENIRS"><span>SOUVENIRS</span></li>
+        <li class="clip neon-text sec mobile">
+          <a href="/artistes.php">ARTISTES</a>
+        </li>
+        <li class="clip neon-text sec mobile">
+          <a href="/inscription.php">BILLETERIE</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/infos-utiles.php">INFOS UTILES</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/annees-precedentes.php">ANNEES PRECEDENTES</a>
+        </li>
+        <li class="clip neon-text sec">
+          <a href="/faq.php">FAQ</a>
+        </li>
       </ul>
     </nav>
-  </section>
+  </div>
+  <script>
+    function toggleMenu() {
+      const header = document.querySelector(".header-full");
+      header.classList.toggle("show");
+    }
+  </script>
 </header>
-
-<script>
-  function toggleMenu() {
-    const header = document.querySelector(".header-full");
-    header.classList.toggle("show");
-  
-    let listItems = header.querySelectorAll("li");
-
-    console.log(header);
-    console.log(listItems);
-
-    listItems.forEach(function (item, index) {
-      setTimeout(function () {
-        item.classList.toggle("show");
-      }, index * 100);
-    });
-  }
-</script>
