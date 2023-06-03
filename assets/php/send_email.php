@@ -22,7 +22,7 @@
 
       $mail->setFrom('contact@alambik-festival.fr', 'Alambik\' Festival');
       $mail->addAddress($email);
-      $mail->Subject = 'Inscription Alambik\' Festival - Arcade Mania';
+      $mail->Subject = 'Finalisation Inscription Alambik\' Festival';
 
 // Construct the HTML email body
       $body ='   
@@ -35,17 +35,16 @@
             </style>
          </head>
          <body>
-            <h1>Confirmation d\'inscription - Alambik\' Festival - Arcade Mania</h1>
             <p>Salut,</p>
-            <p>Merci ' . $prenom . ' de t\'être inscrit.e !</p>
-            <p>Voici les détails de ton inscription :</p>
+            <p>Merci ' . $prenom . ' de t\'être inscrit.e.</p>
+            <p>Voici les détails de ta place :</p>
             <ul>
-               <li><strong>Billet :</strong> ' . $billet .  '€</li>
-               <li><strong>Carte(s) conso :</strong> ' . $carte_conso . '</li>
-               <li><strong>Repas :</strong> ' . $repas . '</li>
-               <li><strong>Coût total :</strong> ' . $total_cost . '€</li>
+               <li>Billet : ' . $billet .  '€</li>
+               <li>Carte(s) conso : ' . $carte_conso . ' (' . $carte_conso*10 . '€)</li>
+               <li>Repas : ' . $repas . ' (' . $prix_repas . '€)</li>
+               <li><strong>Coût total : ' . $total_cost . '€</strong></li>
             </ul>
-            <p>Merci de nous faire parvenir le paiement par un des moyens suivants (en précisant le nom/prenom/pseudo de l\'inscription pour la traçabilité):</p>
+            <p><strong>Une dernière étape pour finaliser ton inscription : le paiement.</strong> Merci de nous le faire parvenir par un des moyens suivants (en précisant le nom/prenom/pseudo de l\'inscription pour la traçabilité):</p>
             <ul>
                <li><strong>IBAN (Hello Bank!) :</strong> FR76 3000 4031 6600 0021 9532 628 (à privilégier si possible)</li>
                <li><strong>Lydia :</strong> https://lydia-app.com/collect/15654-alambik-corbiere-2022/fr</li>

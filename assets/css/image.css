@@ -37,7 +37,7 @@
     background-size: contain; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: 70vh; 
+    height: 65vh; 
     width: 100%;
     display: block; 
     margin-left: auto; 
@@ -75,39 +75,39 @@
 
 
 .img-beinjamin-prejence {
-    background-image: url('/assets/images/artistes/beinjamin-prejence.jpg');
+    background-image: url('/assets/images/artistes/beinjamin-prejence.JPG');
 }
 
 .img-antoine-clem {
-    background-image: url('/assets/images/artistes/antoine-clem.jpeg');
+    background-image: url('/assets/images/artistes/antoine-clem.JPG');
 }
 
-.img-antoine {
-    background-image: url('/assets/images/artistes/antoine.jpg');
+.img-antoine-leonard {
+    background-image: url('/assets/images/artistes/antoine-leonard.JPG');
 }
 
 .img-leonard {
-    background-image: url('/assets/images/artistes/leonard.jpg');
+    background-image: url('/assets/images/artistes/leonard.JPG');
 }
 
 .img-ilyes {
-    background-image: url('/assets/images/artistes/ilyes.jpg');
+    background-image: url('/assets/images/artistes/ilyes.JPG');
 }
 
 .img-theophile {
-    background-image: url('/assets/images/artistes/theophile.jpg');
+    background-image: url('/assets/images/artistes/theophile.JPG');
 }
 
 .img-peuto {
-    background-image: url('/assets/images/artistes/peuto.png');
+    background-image: url('/assets/images/artistes/peuto.JPG');
 }
 
 .img-caresse-express {
-    background-image: url('/assets/images/artistes/caresse-express.png');
+    background-image: url('/assets/images/artistes/caresse-express.JPG');
 }
 
 .img-duane-forrest {
-    background-image: url('/assets/images/artistes/duane-forrest.jpg');
+    background-image: url('/assets/images/artistes/duane-forrest.JPG');
 }
 
 
@@ -116,7 +116,7 @@
 **********/
 
 .img-mario {
-    background-image: url('../images/artistes/mario.png');
+    background-image: url('../images/artistes/mario.JPG');
 }
 
 

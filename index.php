@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <?php include './assets/html/head.html';?>
+  <head>
+    <!-- En-tête de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alambik Festival</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/image.css">
+  </head>
 
   <body>
     <?php include './assets/html/header.html';?>

@@ -10,6 +10,7 @@
     $repas3 = empty($_POST['repasDS'])?0:1;
     $repas4 = empty($_POST['repasLM'])?0:1;
     $total_cost = empty($_POST['total_cost'])?0:$_POST['total_cost'];
+    $prix_repas = ($repas1 + $repas2 + $repas3)*4;
     
     // Calculate repas string
     $repas = '';

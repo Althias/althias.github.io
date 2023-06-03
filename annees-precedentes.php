@@ -24,93 +24,99 @@
       <ul>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1090823.JPG">
+            <img src="/assets/images/festival/festival_1-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1090831.JPG">
+            <img src="/assets/images/festival/festival_2-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1100040.JPG">
+            <img src="/assets/images/festival/festival_3-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1100071.JPG">
+            <img src="/assets/images/festival/festival_4-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1100754.JPG">
+            <img src="/assets/images/festival/festival_5-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1100756.JPG">
+            <img src="/assets/images/festival/festival_6-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1100871.JPG">
+            <img src="/assets/images/festival/festival_7-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110014.JPG">
+            <img src="/assets/images/festival/festival_8-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110081.JPG">
+            <img src="/assets/images/festival/festival_9-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110087.JPG">
+            <img src="/assets/images/festival/festival_10-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110092.JPG">
+            <img src="/assets/images/festival/festival_11-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110214.JPG">
+            <img src="/assets/images/festival/festival_12-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110415.JPG">
+            <img src="/assets/images/festival/festival_13-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110453.JPG">
+            <img src="/assets/images/festival/festival_14-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
         </li>
         <li>
           <div class="dark-filter">
-            <img src="/assets/images/festival/P1110561.JPG">
+            <img src="/assets/images/festival/festival_15-min.JPG">
           </div>
-          <p>image #1</p>
+          <p>&hairsp;</p>
+        </li>
+        <li>
+          <div class="dark-filter">
+            <img src="/assets/images/festival/festival_16-min.JPG">
+          </div>
+          <p>&hairsp;</p>
         </li>
           
       </ul>

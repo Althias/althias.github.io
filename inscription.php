@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <?php include './assets/html/head.html';?>
-
+  <head>
+    <!-- En-tête de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alambik Festival</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/image.css">
+  </head>
 
   <body class="pac-man">    
     <?php include './assets/html/header.html';?>
@@ -61,13 +70,12 @@
               </div>
             </div>
           </form>
-
-          <div style="justify-content: center;" id="result"></div>
         </div>
       </section>
       <div id="confirmationModal" class="modal">
         <div class="modal-content">
           <h2>Inscription OK</h2>
+          <h2>Mail Finalisation envoyé</h2>
           <button type="submit" class="close btn btn-border neon-text neon-border">fermer</button>
         </div>
       </div>
@@ -135,9 +143,7 @@
           })
           .then(function(responseText) {
             // Handle the response from the PHP script
-            var resultElement = document.getElementById('result');
             form.reset();
-            resultElement.innerHTML = "INSCRIPTION OK - " + totalCost;
             
             // Show the modal        
             var modal = document.getElementById("confirmationModal");
